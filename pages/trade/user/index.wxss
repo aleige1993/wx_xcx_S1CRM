@@ -1,0 +1,55 @@
+/* pages/trade/user/index.wxss */
+.search {
+  padding: 0 40rpx;
+}
+.user-list {
+  font-size: 24rpx;
+  /* background: #fff; */
+  position: relative;
+}
+.user-list .list-item > view {
+  padding: 10rpx 0;
+}
+.user-list .head {
+  font-size: 28rpx;
+}
+
+.list-container {
+  height: 1130rpx;
+}
+.user-list .pass
+,.user-list .unpass{
+  margin-right: 40rpx;
+  border-radius: 40rpx;
+  color: #fff;
+  padding: 5rpx 20rpx;
+}
+
+.user-list .pass{
+  background: #52c41a;
+}
+
+.user-list .unpass{
+  background: #707070;
+}
+
+.user-list .list-item {
+  padding: 20rpx 30rpx;
+  border-bottom: 2rpx solid #ddd;
+  background: #fff;
+}
+.user-list .info {
+  display: flex;
+  width: 80%;
+}
+
+.user-list .text{
+  display: flex;
+  color: #707070;
+  min-width: 45%;
+}
+
+.user-list .text > .iconfont
+, .user-list .text > text{
+  margin-right: 15rpx;
+}

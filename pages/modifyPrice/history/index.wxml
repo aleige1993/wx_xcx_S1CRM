@@ -1,0 +1,47 @@
+<!--pages/modifyPrice/history/index.wxml-->
+<view>
+  <view>
+    <wux-tabs controlled current="{{ current }}" theme="positive" bind:change="onTabsChange">
+      <wux-tab key="1" title="已审核"></wux-tab>
+      <wux-tab key="0" title="审核中"></wux-tab>
+      <wux-tab key="2" title="已拒绝"></wux-tab>
+    </wux-tabs>
+  </view>
+
+  <wux-white-space size="default" />
+
+  <view>
+    <wux-refresher id="wux-refresher" bind:refresh="onRefresh">
+        <scroll-view scroll-y="true" class='list-container' bindscrolltolower="bindscrolltolower">
+
+          <view wx:for="{{showList}}" wx:key="{{item.id}}" bindtap='rowTap' data-item='{{item}}'>
+            <view class='start_flex list'>
+              <view class='badge'>
+                <!-- 测试图片 https://picsum.photos/750/750/?random&s=2 -->
+                <image class="image" src="{{item.pic}}" loading="Loading" />
+              </view>
+
+              <view class='info'>
+                <view class='lr_flex'>
+                  <text class='name'>{{item.linkName}}</text>
+                  <text wx:if="{{item.status==1}}" class='status'>{{item.statusValue}}</text>
+                  <text wx:if="{{item.status==0}}" class='ing'>{{item.statusValue}}</text>
+                  <text wx:if="{{item.status==2}}" class='no'>{{item.statusValue}}</text>
+                </view>
+                <view>
+                  <text class='text'>{{item.userTypeStr}}</text>
+                  <text class='text phone'>{{item.phone}}</text>
+                </view>
+                <view class='lr_flex'>
+                  <text class='text compnay'>{{item.company}}</text>
+                  <!-- <text class='text'>共{{item.total}}件商品</text> -->
+                </view>
+              </view>
+            </view>
+            <wux-white-space size="default" />
+          </view>
+
+        </scroll-view>
+    </wux-refresher>
+  </view>
+</view>

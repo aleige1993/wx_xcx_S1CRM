@@ -1,0 +1,40 @@
+/* pages/my.wxss */
+.user-info{
+    color:#fff;
+    padding:20px 10px;
+}
+.user-name{
+  padding-left:10px;
+ line-height: 40px;
+ display: inline-block;
+}
+.assure-info{
+  padding:20rpx;
+  line-height: 30px;
+  background: #fff;
+
+}
+.border-left{
+  border-left:1px solid #ddd;
+}
+.func-list{
+  margin-top:20rpx;
+  background: #fff;
+}
+.func-list>view{
+  line-height: 80rpx;
+  border-bottom:.5rpx solid #ddd;
+  padding-left:30rpx;
+  padding-right:10rpx;
+}
+.func-list image{
+  margin-top:12px;
+  
+}
+.left-icon{
+  margin-right:10rpx;
+}
+.right-icon{
+  float:right;
+  color:#aeaeae;
+}

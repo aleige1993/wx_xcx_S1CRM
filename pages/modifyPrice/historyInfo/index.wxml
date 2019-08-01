@@ -1,0 +1,37 @@
+<!--pages/modifyPrice/historyInfo/index.wxml-->
+<view>
+  <wux-refresher id="wux-refresher" bind:refresh="onRefresh">
+    <scroll-view scroll-y="true" class='container' bindscrolltolower="bindscrolltolower">
+      <view class='empty' wx:if="{{showList.length==0}}">暂无数据</view>
+      <view class='list' wx:for="{{showList}}" wx:for-item="arr" wx:key="{{index}}">
+        <view class='time'>
+          <text>{{arr[0].modifyTime}}</text>
+        </view>
+        <view class="list-container">
+          <wux-row wux-class="row">
+            <wux-col span="6">
+              <view class="title">商品名称</view>
+            </wux-col>
+            <wux-col span="3">
+              <view class="title">修改前</view>
+            </wux-col>
+            <wux-col span="3">
+              <view class="title">修改后</view>
+            </wux-col>
+          </wux-row>
+          <wux-row wx:for="{{arr}}" wx:for-item="arrItem" wx:key="{{arrItem.id}}">
+            <wux-col span="6">
+              <view class="content name">{{arrItem.name}}</view>
+            </wux-col>
+            <wux-col span="3">
+              <view class="content">￥ {{arrItem.historyPrice}}/{{arrItem.unit}}</view>
+            </wux-col>
+            <wux-col span="3">
+              <view class="content">￥ {{arrItem.price}}/{{arrItem.unit}}</view>
+            </wux-col>
+          </wux-row>
+        </view>
+      </view>
+    </scroll-view>
+  </wux-refresher>
+</view>

@@ -1,0 +1,13 @@
+<!--pages/today/index.wxml-->
+<import  src="../../template/dataTemp.wxml"/>
+<import  src="../../template/tabBar.wxml"/>
+<view class="container">
+    <view class="num flex bg">
+      <view class="num-icon flex1">￥</view>
+      <view class="flex1 orange" wx:for="{{count}}" wx:key="{{index}}"><view class="number">{{item}}</view></view>
+    </view>
+    <view>
+    <template is="dataTemp" data="{{...todayData}}"></template>
+    </view>
+   <common-tabbar></common-tabbar>
+</view>

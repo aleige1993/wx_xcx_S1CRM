@@ -1,0 +1,19 @@
+<!--pages/trade/creditRecord/index.wxml-->
+<view>
+  <wux-tabs controlled current="{{ current }}" theme="positive" bind:change="onTabsChange">
+    <wux-tab key="tab1" title="信用记录"></wux-tab>
+    <wux-tab key="tab2" title="还款记录"></wux-tab>
+    <wux-tab key="tab3" title="线下使用"></wux-tab>
+    <wux-tab key="tab4" title="线下还款"></wux-tab>
+  </wux-tabs>
+
+  <wux-refresher id="wux-refresher" bind:pulling="onPulling" bind:refresh="onRefresh">
+    <view class='empty' wx:if="{{creditList.length==0}}">
+      <text>暂无数据</text>
+    </view>
+
+    <button bindtap='getMore' wx:if="{{hasMore}}">点击查看更多</button>
+  </wux-refresher>
+
+  <user-bar activeKey="credit"></user-bar>
+</view>

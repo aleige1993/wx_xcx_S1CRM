@@ -1,0 +1,9 @@
+<import src="../../template/dataTemp.wxml" />
+<view class="container">
+  <search bindtap="showSearch" searchText="{{searchText}}"></search>
+  <view bindtap="navigatePage">
+    <template is="dataTemp" data="{{...todayData}}"></template>
+  </view>
+  <search-history showSearchBool="{{showSearchBool}}" bind:changeStatus="changeStatus"></search-history>
+  <common-tabbar activeKey="history"></common-tabbar>
+</view>

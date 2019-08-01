@@ -1,0 +1,7 @@
+<view class="search-box">
+  <view class="search">
+    <text>{{searchText}}</text>
+    <zicon type="search" size='20' color='#777' />
+  </view>
+
+</view>

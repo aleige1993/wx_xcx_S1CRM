@@ -1,0 +1,122 @@
+/**app.wxss**/
+@import '/static/fonts/iconfont.wxss';
+Page,.container{
+  font-size: 28rpx;
+  height: 100%;
+  background: #eee;
+}
+.colon::after{
+  margin-right:10rpx;
+   content:":";
+}
+.flex{
+  display: flex;
+}
+.flex1{
+  flex:1;
+}
+.clearfix::after{
+  height: 0;
+  display: block;
+  content: "";
+  clear: both
+}
+.text-center{
+  text-align: center;
+}
+.justify{
+justify-content: space-between;
+}
+/* 浮动 */
+.float-right{
+  float:right;
+}
+/* 公用颜色 */
+.bg{
+   background: #2F8DFE;
+}
+.bg-white{
+  background: #fff;
+}
+.blue{
+ background: #2F8DFE;
+}
+.orange{
+  color: orange;
+}
+.black{
+  color:#333;
+}
+.gray{
+  color: #b2b2b2;
+}
+.fontsize-36{
+  font-size:36rpx;
+}
+.btn{
+  background: #2F8DFE;
+  line-height: 80rpx;
+  color:#fff;
+  border-radius: 10rpx;
+  width:90%;
+  text-align: center;
+  margin-left: 5%;
+}
+.lr_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tb_flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.empty {
+  color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 32rpx;
+}
+.placeholder {
+  color: #ccc;
+  font-size: 16rpx;
+  margin: 20rpx;
+}
+/* 公共间距 */
+.margin-bttom-10{
+  margin-bottom:20rpx;
+}
+/* scroll-view{
+  background: #fff;
+} */
+.no-more{
+  line-height: 100rpx;
+  text-align: center;
+}
+.no-data{
+  padding-top:100rpx;
+  text-align: center;
+}
+.scroll-box{
+  flex: 1;
+  height: 0;
+}
+
+.fix-bottom{
+  position: fixed!important;
+  left: 0;
+  bottom: 0;
+}
+
+.icon-user,
+.icon-right{
+  color:#aeaeae;
+}
+
+.refresh {
+  margin-top: 20rpx;
+}

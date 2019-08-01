@@ -1,0 +1,11 @@
+/* pages/trade/user/data/index.wxss */
+.num {
+  padding: 20rpx;
+}
+
+.system-label .wux-cell__ft{
+  width: 500rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

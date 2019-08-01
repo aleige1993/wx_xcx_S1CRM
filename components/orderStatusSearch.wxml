@@ -1,0 +1,11 @@
+<!--components/searchHistory.wxml-->
+<view class="content" wx:if="{{showSearchBool}}">
+  <view class="shadow" catchtap="hideSearch"></view>
+  <view class="box">
+    <view>订单状态</view>
+    <view wx:for="{{array}}" class="item-box " wx:key="{{index}}">
+      <view class="item {{item.isChoose?'choose':''}}" catchtap='chooseItem' data-index="{{index}}" data-item="{{item}}">{{item.text}} </view>
+    </view>
+    <view class="btn" catchtap='searchOrder'>搜索</view>
+  </view>
+</view>

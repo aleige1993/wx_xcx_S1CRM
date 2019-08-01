@@ -1,0 +1,15 @@
+/* pages/mine/uploadComplete.wxss */
+.container{
+  background: #fff;
+}
+.info{
+  padding-top:80rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+.info .iconfont{
+  font-size: 56rpx;
+}
+.btn{
+  margin-top:40rpx;
+}

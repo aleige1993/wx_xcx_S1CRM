@@ -1,0 +1,112 @@
+/* pages/mine/order/orderList.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: #eee;
+}
+
+scroll-view {
+  background: #eee;
+}
+
+.list-item {
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+.list-item .content{
+  /* padding: 40rpx 10rpx 10rpx 40rpx; */
+  padding: 20rpx;
+  font-size: 24rpx;
+}
+
+.list-item .flag{
+  position: relative;
+}
+
+.triangle_border_up_left {
+  width: 0;
+  height: 0;
+  border-top: 110rpx solid rgb(58, 129, 247);
+  border-right: 110rpx solid transparent;
+  position:absolute;
+  z-index:1;
+  top:0;
+  left: 0;
+
+}
+.flag text {
+  color: #fff;
+  font-size: 24rpx;
+  transform:rotate(-45deg);
+  position: absolute;
+  top: 24rpx;
+  left: -6rpx;
+  z-index: 2;
+}
+
+/* .triangle_border_up_left.blue{
+  border-top: 40rpx solid rgb(58, 129, 247);
+} */
+.triangle_border_up_left.green{
+  border-top: 110rpx solid rgb(0, 150, 136);
+}
+
+
+.list-item .lr_flex {
+  padding: 10rpx;
+}
+
+.list-item .name {
+  font-size: 26rpx;
+  font-weight: 600;
+}
+
+.list-item .time {
+  color: rgb(186, 186, 186);
+}
+
+.list-item .col {
+  display: inline-block;
+  width: 120rpx;
+}
+
+.list-item .col.name{
+  width: 124rpx;
+}
+
+.list-item .limit {
+  display: inline-block;
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.border-top {
+  border-top: 1rpx solid #ddd;
+}
+
+.order-btn {
+  padding: 5rpx 20rpx;
+  background: rgb(193, 193, 193);
+  border-radius: 10rpx;
+  color: #fff;
+}
+
+.order-btn.blue {
+  background: rgb(58, 129, 247);
+  border: 2rpx solid rgb(58, 129, 247);
+}
+
+.order-btn.orange {
+  background: rgb(255, 152, 0);
+  border: 2rpx solid rgb(255, 152, 0);
+}
+
+.start_flex {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}

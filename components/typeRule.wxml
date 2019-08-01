@@ -1,0 +1,24 @@
+<view class="container flex flex1">
+  <view class="item flex">
+    <view class="flex1">名称</view>
+    <view class="right" bindtap='chooseAll'>{{isChooseAll?'取消全选':'全选'}}</view>
+  </view>
+  <view class="scroll-box">
+    <scroll-view class="list" style="height:100%" scroll-y="true">
+      <checkbox-group bindchange="getCheckValue">
+        <view class="item flex " wx:for="{{listData}}" wx:key="{{index}}">
+          <view class="flex1">
+            <view>{{item.name}}</view>
+            <view>{{item.companyName}}</view>
+          </view>
+          <view class="right">
+            <checkbox value="{{item.id}}" checked='{{isChooseAll||item.checked}}' data-obj="{{item}}" color="#2F8DFE"/>
+          </view>
+        </view>
+      </checkbox-group>
+    </scroll-view>
+  </view>
+  <view class="btn-box">
+    <view class="btn" bindtap='sureSearch'>确定</view>
+  </view>
+</view>

@@ -1,0 +1,71 @@
+<template name="dataTemp">
+  <view class="content">
+    <view class="item">
+      <view class="title" bindtap='navigatePage' data-type="order">
+        <view class="iconfont icon-order"></view>
+        <text style="margin-left:20rpx;">订单数据</text>
+         <view class="iconfont icon-right right-icon" ></view>
+      </view>
+      <view class="order-title">
+        <text>交易订单数量</text>
+        <text class="orange float-right">{{orderCount||0}}</text>
+      </view>
+      <view class="flex text-center status-box" >
+        <view class="flex1" bindtap='navigatePage' data-type="orderSearch" data-status="1">
+          <view class="iconfont icon-zhifuchenggong "></view>
+          <view>{{orderPayedCount||0}}</view>
+          <view>已支付</view>
+        </view>
+        <view class="flex1" bindtap='navigatePage' data-type="orderSearch" data-status="2">
+         <view class="iconfont icon-fahuo"></view>
+          <view>{{orderDeliveryCount||0}}</view>
+          <view>已发货</view>
+        </view>
+        <view class="flex1" bindtap='navigatePage' data-type="orderSearch" data-status="3">
+         <view class="iconfont icon-completetheorder"></view>
+          <view>{{orderCompletedCount||0}}</view>
+          <view>已完成</view>
+        </view>
+        <view class="flex1" bindtap='navigatePage' data-type="orderSearch" data-status="6">
+          <view class="iconfont icon-tuikuan"></view>
+          <view>{{orderRefundCount||0}}</view>
+          <view>退款成功</view>
+        </view>
+      </view>
+    </view>
+    <view class="item" bindtap='navigatePage' data-type="user">
+      <view class="title"  >
+         <view class="iconfont icon-user"></view>
+        <text style="margin-left:20rpx;">注册用户信息</text>
+         <view class="iconfont icon-right right-icon"></view>
+      </view>
+      <view class="flex num-box">
+        <view class="flex1">
+          <view>新增注册用户数</view>
+          <view class="orange">{{registerUserNewCount||0}}</view>
+        </view>
+        <view class="flex1">
+          <view>累计注册用户数</view>
+          <view class="orange">{{registerUserCount||0}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="title"  >
+         <view class="iconfont icon-user"></view>
+        <text style="margin-left:20rpx;">交易用户信息</text>
+        <!-- <view class="iconfont icon-right right-icon" ></view> -->
+      </view>
+      <view class="flex num-box">
+        <view class="flex1" bindtap='navigatePage' data-type="tradeUser">
+          <view>活跃用户数</view>
+          <view class="orange">{{activelyUserCount||0}}</view>
+        </view>
+        <view class="flex1" bindtap='navigatePage' data-type="addTradeUser">
+          <view>新增活跃用户数</view>
+          <view class="orange">{{activelyUserNewCount||0}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

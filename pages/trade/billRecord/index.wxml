@@ -1,0 +1,33 @@
+<!--pages/trade/billRecord/index.wxml-->
+<view>
+  <view>
+    <view class="trade-info bg">
+      <view class="flex">
+        <view class='info-cell'>
+          <view>授信额度</view>
+          <view>0.00</view>
+        </view>
+        <view class='info-cell'>
+          <view>已用额度</view>
+          <view>0.00</view>
+        </view>
+        <view class='info-cell'>
+          <view>冻结额度</view>
+          <view>0.00</view>
+        </view>
+      </view>
+      <view class="flex">
+        <view class='info-cell'>
+          <view>还款周期</view>
+          <view>暂无</view>
+        </view>
+        <view class='info-cell'>
+          <view>还款日</view>
+          <view>暂无</view>
+        </view>
+        <view class='info-cell'></view>
+      </view>
+    </view>
+  </view>
+  <user-bar activeKey="bill"></user-bar>
+</view>

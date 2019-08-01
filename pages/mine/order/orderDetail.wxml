@@ -1,0 +1,19 @@
+<!--pages/mine/order/orderDetail.wxml-->
+<view>
+  <wux-cell-group>
+    <wux-cell title="订单编号" extra="{{order.orderNo}}"></wux-cell>
+    <wux-cell title="下单时间" extra="{{order.createTime}}"></wux-cell>
+    <wux-cell title="订单金额" extra="￥ {{order.totalPrice}}"></wux-cell>
+    <wux-cell title="手续费" extra="￥ {{order.fee}}"></wux-cell>
+    <wux-cell title="结算金额" wux-class="price" extra="￥ {{order.settledMoney}}"></wux-cell>
+    
+  </wux-cell-group>
+
+  <wux-white-space size="large" />
+
+  <view class='intro'><zicon type="iconcopy" color="#ff6600" size="28"></zicon><text>此数据为最终结算数据</text></view>
+
+  <wux-white-space size="large" />
+
+  <wux-button block type="positive" bind:click="onButtonClick">确认结算</wux-button>
+</view>

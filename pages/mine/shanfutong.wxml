@@ -1,0 +1,97 @@
+<view class="container">
+  <view class="tab bg">
+    <view class="tab-box flex">
+      <view class="flex1 {{chooseIndex == 1?'choose':''}}" data-index='1' bindtap='switchTab'>已担保</view>
+      <view class="flex1 {{chooseIndex == 2?'choose':''}}" data-index='2' bindtap='switchTab'>未担保</view>
+      <view class="flex1 {{chooseIndex == 3?'choose':''}}" data-index='3' bindtap='switchTab'>使用金额</view>
+      <view class="flex1 {{chooseIndex == 4?'choose':''}}" data-index='4' bindtap='switchTab'>剩余金额</view>
+    </view>
+  </view>
+  <view class="tab-item" wx:if="{{chooseIndex==1}}">
+    <view class="num-box bg">
+      <view>已担保商户数</view>
+      <view class="num">23家</view>
+    </view>
+    <view class="item has-assure clearfix">
+      <view class="user-title flex">
+        <image src="../../static/images/default_head.png" style="width:42px" mode='widthFix'></image>
+        <view class="user-info flex1">
+          <view>姓名</view>
+          <view>个体经营户</view>
+          <view>姓名</view>
+          <view>姓名</view>
+        </view>
+        <view class="user-time">2015-09-09</view>
+      </view>
+      <view class="btn ">
+        取消担保
+      </view>
+    </view>
+
+
+
+  </view>
+  <view class="tab-item" wx:if="{{chooseIndex==2}}">
+    <view  class="num-box bg">
+      <view >未担保商户数</view>
+      <view class="num">23家</view>
+    </view>
+    <view class="item not-assure clearfix">
+      <view class="user-title flex">
+        <image src="../../static/images/default_head.png" style="width:42px" mode='widthFix'></image>
+        <view class="user-info flex1">
+          <view>姓名</view>
+          <view>个体经营户</view>
+          <view>姓名</view>
+          <view>姓名</view>
+        </view>
+        <view class="user-time">2015-09-09</view>
+      </view>
+      <view class="btn ">
+        取消担保
+      </view>
+    </view>
+  </view>
+  <view class="tab-item" wx:if="{{chooseIndex==3}}">
+    <view  class="num-box bg">
+      <view>使用金额</view>
+      <view class="num">10元</view>
+    </view>
+    <view class="item has-used clearfix">
+      <view class="user-title flex">
+        <image src="../../static/images/default_head.png" style="width:42px" mode='widthFix'></image>
+        <view class="user-info flex1">
+          <view>姓名</view>
+          <view>个体经营户</view>
+          <view>姓名</view>
+          <view>姓名</view>
+        </view>
+        <view class="user-time">2015-09-09</view>
+      </view>
+      <view class="btn blue">
+        <text class="colon">已使用金额</text><text>111</text>
+      </view>
+    </view>
+  </view>
+  <view class="tab-item" wx:if="{{chooseIndex==4}}">
+    <view  class="num-box bg">
+      <view>剩余金额</view>
+      <view class="num">10元</view>
+    </view>
+    <view class="item not-used clearfix">
+      <view class="user-title flex">
+        <image src="../../static/images/default_head.png" style="width:42px" mode='widthFix'></image>
+        <view class="user-info flex1">
+          <view>姓名</view>
+          <view>个体经营户</view>
+          <view>姓名</view>
+          <view>姓名</view>
+        </view>
+        <view class="user-time">2015-09-09</view>
+      </view>
+      <view class="btn blue ">
+        <text class="colon">剩余金额</text><text>111</text>
+      </view>
+    </view>
+  </view>
+</view>

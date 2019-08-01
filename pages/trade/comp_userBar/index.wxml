@@ -1,0 +1,20 @@
+<!--pages/trade/userBar/index.wxml-->
+<!--components/commonTabbar.wxml-->
+<wux-tabbar defaultCurrent="{{activeKey}}" theme="positive" position="bottom" bind:change="changeTabbar">
+  <wux-tabbar-item title="基本资料" key="basic">
+    <wux-icon wux-class="icon" type="ios-time" size="22" slot="icon-on" />
+    <wux-icon wux-class="icon" type="ios-time" size="22" slot="icon-off" />
+  </wux-tabbar-item>
+  <wux-tabbar-item title="信用记录" key="credit">
+    <wux-icon wux-class="icon" type="ios-time" size="22" slot="icon-on" />
+    <wux-icon wux-class="icon" type="ios-time" size="22" slot="icon-off" />
+  </wux-tabbar-item>
+  <wux-tabbar-item title="账单记录" key="bill">
+    <wux-icon wux-class="icon" type="ios-brush" size="22" slot="icon-on" />
+    <wux-icon wux-class="icon" type="ios-brush" size="22" slot="icon-off" />
+  </wux-tabbar-item>
+  <wux-tabbar-item title="订单记录" key="order">
+    <wux-icon wux-class="icon" type="ios-heart-half" size="22" slot="icon-on" />
+    <wux-icon wux-class="icon" type="ios-heart-half" size="22" slot="icon-off" />
+  </wux-tabbar-item>
+</wux-tabbar>

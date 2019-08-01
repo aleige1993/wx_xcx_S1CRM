@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "信用记录",
+  "usingComponents": {
+    "wux-tabs": "../../ui-plugins/wux/tabs/index",
+    "wux-tab": "../../ui-plugins/wux/tab/index",
+    "user-bar": "../comp_userBar/index"
+  }
+}

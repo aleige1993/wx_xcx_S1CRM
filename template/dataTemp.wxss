@@ -1,0 +1,45 @@
+.padding{
+  padding:20rpx;
+}
+.item{
+  color:#333;
+}
+.black{
+  color: #000;
+}
+.orange{
+  color:orange;
+}
+.title{
+  padding:0 20rpx;
+  line-height: 60rpx;
+}
+.status-box,.num-box,.order-title{
+  background: #fff;
+}
+.order-title{
+  padding:0 10px;
+  border-bottom:1rpx solid #ddd;
+  line-height: 60rpx;
+}
+.num-box{
+  text-align: center;
+  padding:20rpx;
+}
+.status-box{
+  padding:40rpx 0;
+}
+.right-icon{
+  width:28rpx;float:right;
+}
+.status-icon{
+ width:40rpx;
+ height: 36rpx;
+}
+.iconfont{
+  display: inline-block;
+  color:#aeaeae;
+}
+.status-box .iconfont{
+  font-size:40rpx;
+}

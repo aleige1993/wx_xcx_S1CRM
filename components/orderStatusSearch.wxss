@@ -1,0 +1,53 @@
+/* components/orderStatusSearch.wxss *//* components/searchHistory.wxss */
+.content{
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100%;
+  width:100%;
+  z-index:2;
+}
+.shadow{
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.box{
+  padding:20rpx;
+  background: #fff;
+}
+.item-box{
+   display: inline-block;
+
+}
+.item{
+  display: inline-block;
+
+  text-align: center;
+  line-height: 40rpx;
+  border:1rpx solid #ddd;
+  margin-right:20rpx;
+  margin-bottom:30rpx;
+  border-radius: 10rpx;
+  padding:30rpx;
+ 
+ 
+}
+.choose{
+  border-color:#2F8DFE;
+  color:#2F8DFE;
+}
+.btn{
+  background: #2F8DFE;
+  line-height: 80rpx;
+  color:#fff;
+  border-radius: 10rpx;
+  width:90%;
+  text-align: center;
+  margin-left: 5%;
+}
+
+
+

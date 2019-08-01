@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="title item">{{provinceName}}
+  </view>
+  <view class="scroll-box flex1">
+  <scroll-view scroll-y="true" style="height:100%">
+  <view class="item" wx:for="{{cityData}}" wx:key="{{item.id}}" bindtap="clickCity" data-id="{{item.id}}" data-cityName="{{item.areaName}}" data-district="{{item.children}}">
+    <text>{{item.areaName}}</text>
+  </view>
+  </scroll-view>
+  <district districtData="{{district}}"  provinceName="{{provinceName}}" cityName="{{cityName}}" wx:if="{{showDistrict}}" bind:getChosedDistrict="getChosedDistrict"></district>
+  </view>
+</view>

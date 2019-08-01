@@ -1,0 +1,13 @@
+<view class="container">
+  <view style="text-align:center">
+    <canvas canvas-id="canvas" style="width: 300px; height: 300px;display:inline-block;"></canvas>
+  </view>
+  <view class="step">
+    <view class="colon">绑定客户步骤</view>
+    <view>第一步：业务员分享个人的CRM二维码;</view>
+    <view>第二步：商户扫码识别二维码后，打开链接,注册壹号源APP(填写电话号码、验证码\密码);</view>
+    <view>第三步：业务员根据提交的客户注册信息填写商户信息;</view>
+    <view>第四步：CRM系统审核,审核通过即绑定成功;</view>
+    <view>业务员可至个人中心-用户管理查看绑定的用户信息</view>
+  </view>
+</view>

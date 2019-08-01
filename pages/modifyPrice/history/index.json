@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "wux-refresher": "../../ui-plugins/wux/refresher/index",
+    "wux-tabs": "../../ui-plugins/wux/tabs/index",
+    "wux-tab": "../../ui-plugins/wux/tab/index",
+    "wux-white-space": "../../ui-plugins/wux/white-space/index"
+  },
+  "navigationBarTitleText": "改价历史"
+}

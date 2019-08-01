@@ -1,0 +1,9 @@
+<!--pages/mine/order/success.wxml-->
+<view>
+  <view class='center'>
+    <zicon type="chenggong" size="80" color="#1afa29"></zicon>
+    <text>结算申请已提交, 请等待审核!</text>
+  </view>
+  <wux-white-space size="large" />
+  <wux-button block type="positive" bind:click="onButtonClick">确认</wux-button>
+</view>

@@ -1,0 +1,57 @@
+/* pages/mine/message/systemMessage.wxss */
+.scroll-box{
+  flex: 1;
+  height: 0;
+}
+scroll-view {
+  background:transparent;
+}
+.item_layout_view {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+.no_data_view {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction:row;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+}
+.msg_time_view {
+  margin: 10px 0 0;
+  text-align: center
+}
+.msg_time_view text{
+  background: #d9d9d9;
+  border: 0.2rpx #d9d9d9;
+  border-radius: 10rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  padding-top: 5rpx;
+  padding-bottom: 5rpx;
+  margin-top: 20rpx;
+  color: white;
+}
+.msg_content_view {
+  padding: 30rpx;
+  background: white;
+  margin-top: 30rpx;
+  border: 0.1prx white;
+  border-radius: 8rpx;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+.msg_content_text_view{
+  margin-top: 20rpx;
+}
+.msg_content_text {
+  color: #d4d4d4;
+  margin-top: 30rpx;
+  flex-wrap: wrap;
+  word-break: break-all;
+}

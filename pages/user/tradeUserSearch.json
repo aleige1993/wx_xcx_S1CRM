@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "交易客户信息",
+  "usingComponents": {
+    "wux-cell-group": "../../ui-plugins/wux/cell-group/index",
+    "wux-cell": "../../ui-plugins/wux/cell/index",
+    "wux-input": "../../ui-plugins/wux/input/index"
+  }
+}

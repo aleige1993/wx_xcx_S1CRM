@@ -1,0 +1,32 @@
+<view class="container">
+  <scroll-view>
+    <view class="upload-box" bindtap='uploadFile' data-type="idCard">
+      <text class='reason' wx:if="{{idcardReason}}">{{idcardReason}}</text>
+      <view class="add-image">
+        <view class="iconfont icon-add"></view>
+        <view>请上传身份证照片</view>
+      </view>
+      <view>
+      </view>
+      <image src="{{idcardPathTemp}}" class="img" wx:if="{{idcardPathTemp!=''}}"></image>
+    </view>
+
+    <view class="upload-box" bindtap='uploadFile' data-type="licence">
+    <text class='reason' wx:if="{{licenceReason}}">{{licenceReason}}</text>
+      <view class="add-image">
+        <view class="iconfont icon-add"></view>
+        <view>请上传营业执照照片</view>
+      </view>
+      <image src="{{licencePathTemp}}" class="img" wx:if="{{licencePathTemp!=''}}"></image>
+    </view>
+    <view class="upload-box" bindtap='uploadFile' data-type="store">
+    <text class='reason' wx:if="{{storeReason}}">{{storeReason}}</text>
+      <view class="add-image">
+        <view class="iconfont icon-add "></view>
+        <view>请上传门店照片</view>
+      </view>
+      <image src="{{storePathTemp}}" class="img" wx:if="{{storePathTemp!=''}}"></image>
+    </view>
+    <view class="btn" bindtap='submitCheck'>提交审核</view>
+  </scroll-view>
+</view>

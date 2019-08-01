@@ -1,0 +1,20 @@
+<view class="container">
+  <image src="../static/images/choice_close.png" style="width:60rpx;position:absolute;left:15%" mode="widthFix" bindtap='closeCatogory'></image>
+  <scroll-view  class="right-list" scroll-y="true" style="height:100%">
+    <view class="classify" wx:for="{{classifyData}}" wx:key="index" wx:for-item="classifyItem">
+      <view class="classify-parent">{{classifyItem.name}}</view>
+      <view wx:if="{{classifyItem.children && classifyItem.children.length}}" wx:for="{{classifyItem.children}}" wx:for-item="classifySubItem"  wx:key="index">
+       <radio-group class="radio-group" bindchange="radioChange" data-name="{{classifySubItem.name}}">
+        <view class="classify-sub" bindtap='chooseClassify'>{{classifySubItem.name}}
+        <radio value="{{classifySubItem.code}}" checked='{{classifySubItem.code == categoryCodes}}'  color="#2F8DFE"/>
+        </view>
+        </radio-group>
+        <view wx:if="{{classifySubItem.children && classifySubItem.children.length}}" wx:for="{{classifySubItem.children}}" wx:for-item="classifySub"  wx:key="index">
+        <radio-group class="radio-group" bindchange="radioChange" data-name="{{classifySub.name}}">
+        <view class="sub-item" bindtap='chooseClassify'>{{classifySub.name}}<radio value="{{classifySub.code}}"  checked='{{classifySub.code == categoryCodes}}' color="#2F8DFE"/></view>
+        </radio-group>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

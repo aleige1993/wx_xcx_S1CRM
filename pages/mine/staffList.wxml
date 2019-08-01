@@ -1,0 +1,27 @@
+<view class='container'>
+<refresher bind:refresh="onRefresh" id="refresher" bind:loadMore="loadMore" noData="{{userData.length==0}}">
+  <view class="staff-item" wx:for="{{userData}}" wx:key="{{index}}">
+    <view class='title'>
+      <view class="staff-title">
+        <image class='image' mode="widthFix" src="{{item.pic}}"></image>
+        <view class="staff-name">{{item.name}}</view>
+
+      </view>
+      <view class="text">
+        <text>入职时间: </text>
+        <text>{{item.modifyTime}}</text>
+      </view>
+    </view>
+    <view class="staff-info ">
+      <view class="text">
+        <text>电话号码: </text>
+        <text>{{item.phone}}</text>
+      </view>
+      <view class="text">
+        <text>用户数: </text>
+        <text>{{item.userTotal}}</text>
+      </view>
+    </view>
+  </view>
+</refresher>
+</view>

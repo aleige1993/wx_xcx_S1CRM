@@ -1,0 +1,11 @@
+<scroll-view style="height:100%" scroll-y="true"  bindscrolltoupper="bindscrolltoupper" bindscrolltolower="bindscrolltolower" >
+<view class="no-data" wx:if="{{total ==0}}">暂无数据</view>
+<view wx:for="{{dataList}}" wx:key="{{index}}">
+ <slot >
+ 
+ </slot>
+</view>
+
+
+  <view class="no-more" wx:if="{{pageIndex == pageCount}}">{{total}}没有更多数据</view>
+</scroll-view>

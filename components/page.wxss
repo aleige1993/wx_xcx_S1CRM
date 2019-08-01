@@ -1,0 +1,5 @@
+/* components/page.wxss */
+.no-data{
+  padding-top:100rpx;
+  text-align: center;
+}

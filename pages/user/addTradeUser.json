@@ -1,0 +1,7 @@
+
+{
+  "navigationBarTitleText": "新增活跃用户数",
+  "usingComponents": {
+    "wux-refresher": "../../ui-plugins/wux/refresher/index"
+  }
+}

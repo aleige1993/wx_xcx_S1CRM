@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "zicon": "../../components/zicon/index"
+  }
+}

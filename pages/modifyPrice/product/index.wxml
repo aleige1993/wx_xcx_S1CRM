@@ -1,0 +1,76 @@
+<!--pages/modifyPrice/product/index.wxml-->
+<view>
+  <view class='search'>
+    <wux-search-bar wux-class="search-bar" bind:confirm="searchComfirmEvent" value="{{ keyWord }}" controlled="true" placeholder="请输入商品关键字" bind:clear="onClear" />
+  </view>
+
+  <wux-white-space size="default" />
+
+  <view>
+    <wux-refresher id="wux-refresher" bind:refresh="onRefresh">
+      <checkbox-group bind:change="onCheckboxChange">
+        <scroll-view scroll-y="true" class='list-container' bindscrolltolower="bindscrolltolower">
+
+          <view wx:for="{{showList}}" wx:key="{{item.id}}">
+            <label class="checkbox">
+              <view class='start_flex list {{item.auditing?"active":""}}' bindtap='onLabelTap' data-obj="{{item}}">
+                <checkbox class="list-checkbox" wx:if="{{!item.auditing && checkedObj[item.id]}}" value="{{item.id}}" checked="{{checkedObj[item.id]}}" />
+                <view class='auditing' wx:if="{{item.auditing}}">审核中</view>
+                <view class='badge'>
+                  <image class="image" src="{{item.smallPath}}" loading="Loading" />
+                </view>
+
+                <view class='info'>
+                  <view class='start_flex'>
+                    <z-icon type="tag" size='24' color="#2F8DFE" />
+                    <text class='text phone'>{{item.name}}</text>
+                  </view>
+                  <view class='start_flex'>
+                    <z-icon type="fenlei1" size='22' color="#2F8DFE" />
+                    <text class='text compnay'>{{item.typeName}}</text>
+                  </view>
+                  <view class='lr_flex'>
+                    <view class='start_flex'>
+                      <z-icon type="dizhi" size='24' color="#2F8DFE" />
+                      <text class='text'>{{item.num}} {{item.unit}}装</text>
+                    </view>
+                    <text class='text'>￥ {{item.price}}/{{item.unit}}</text>
+                  </view>
+                </view>
+              </view>
+            </label>
+            <view class='lr_flex price' wx:if="{{!item.auditing && checkedObj[item.id]}}">
+              <view >
+              <text wx:if="{{checkedObj[item.id].newPrice&&checkedObj[item.id].newPrice>-1}}">{{!self?"成交价格":"展示价格"}}: ￥ {{checkedObj[item.id] ? checkedObj[item.id].newPrice : ''}}</text>
+              </view>
+              <view class='start_flex' bindtap='showPriceDialog' data-item="{{item}}">
+                <z-icon type="xiugai1" size='24' color="#2F8DFE" />
+                <text>改价</text>
+              </view>
+            </view>
+            <wux-white-space size="default" />
+          </view>
+
+        </scroll-view>
+      </checkbox-group>
+    </wux-refresher>
+  </view>
+
+  <wux-button wx:if="{{!isSelf&&checkedList.length==0}}" wux-class="fix-bottom" block disabled type="light">提交审核</wux-button>
+  <wux-button wx:if="{{!isSelf&&checkedList.length>0}}" wux-class="fix-bottom" block block type="positive" bind:click="onCommitCheckClick">提交审核</wux-button>
+  <wux-button wx:if="{{isSelf&&checkedList.length==0}}" wux-class="fix-bottom" block disabled type="light">确认修改展示价</wux-button>
+  <wux-button wx:if="{{isSelf&&checkedList.length>0}}" wux-class="fix-bottom" block block type="positive" bind:click="onCommitUpdateClick">确认修改展示价</wux-button>
+
+  <wux-popup position="center" visible="{{ dialogShow }}" bind:close="onCloseDialog">
+    <view slot="header" class='dialog-header'><text bindtap='onQuestionTap'>?</text></view>
+    <wux-cell-group>
+        <wux-cell title="当前价格" extra="￥ {{dialogData.currentPrice}}/{{dialogData.unit}}"></wux-cell>
+        <wux-cell hover-class="none"> <wux-input label='{{!self?"成交价格":"展示价格"}}' value="{{inputValue}}" controlled  type="digit" bind:change="onDialogInput" extra="/{{dialogData.unit}}" /></wux-cell>
+    </wux-cell-group>
+
+    <view class='dialog-footer'>
+      <view class='button-cancle' bindtap='dialogCancle'>取消</view>
+      <view class='button-yes' bindtap='dialogYes'>确定</view>
+    </view>
+  </wux-popup>
+</view>

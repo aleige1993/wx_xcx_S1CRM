@@ -1,0 +1,14 @@
+/* pages/modifyPrice/priceInfo/index.wxss */
+.container {
+  background: #fff;
+}
+.title {
+  margin: 22rpx 8rpx;
+  color: #000;
+}
+
+.content {
+  padding: 0 40rpx;
+  word-break: break-all;
+  color: #a1a1a1;
+}

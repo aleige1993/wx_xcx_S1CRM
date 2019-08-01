@@ -1,0 +1,11 @@
+<!-- 安全设置UI -->
+<view class="container">
+  <view class="input_layout">
+    <input class="password_input_view" bindinput="setOldPasswordValue" placeholder="原密码" password="true" name="oldPassword" value="{{oldPassword}}"></input>
+    <input class="password_input_view" bindinput="setNewPasswordValue" placeholder="新密码" password="true"></input>
+    <input class="password_input_view" bindinput="setConfirmPassword" placeholder="确认密码" password="true"></input>
+  </view>
+  <view class="btn" bindtap="savePassword" style="margin-top: 50rpx">
+    <text>保存</text>
+  </view>
+</view>

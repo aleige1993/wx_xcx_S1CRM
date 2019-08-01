@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "wux-icon": "../../ui-plugins/wux/icon/index",
+    "wux-button": "../../ui-plugins/wux/button/index",
+    "wux-white-space": "../../ui-plugins/wux/white-space/index",
+    "zicon": "../../components/zicon/index"
+  },
+  "navigationBarTitleText": "上传商户资料"
+}

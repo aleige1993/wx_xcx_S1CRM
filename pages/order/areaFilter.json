@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "省/市/区",
+  "usingComponents": {
+    "district":"../../components/district",
+    "city":"../../components/city"
+  }
+}

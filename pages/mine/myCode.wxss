@@ -1,0 +1,8 @@
+/* pages/mine/my.wxss */
+.container{
+  background:#fff;
+  padding:20rpx;
+}
+.step>view{
+  padding:20rpx;
+}

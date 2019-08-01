@@ -1,0 +1,6 @@
+<!--components/zicon/index.wxml-->
+<view class="z-class iconfont {{ type ? 'icon' + type : '' }}" style="font-size: {{ fontSize }}; {{ color ? 'color: ' + color : '' }}" hidden="{{ hidden }}"></view>
+
+
+
+

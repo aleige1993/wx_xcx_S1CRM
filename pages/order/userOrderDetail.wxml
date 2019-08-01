@@ -1,0 +1,28 @@
+<!--pages/order/userOrderDetail.wxml-->
+<view class="container ">
+  <scroll-view>
+    <view class="order-item flex" catchtap='orderDetail' wx:for="{{orderData}}" wx:key="{{index}}" data-item='{{item}}'>
+      <view class="flex1">
+        <view class="order-title">{{item.companyName}}</view>
+        <view class="gray">
+          <text class="colon">订单编号: </text>
+          <text>{{item.orderNo}}</text>
+        </view>
+        <view class="gray">
+          <text class="colon">订购时间: </text>
+          <text>{{item.createTime}}</text>
+        </view>
+        <view class="gray">
+          <text class="colon">订单金额: </text>
+          <text>{{item.orderMoney}}</text>
+        </view>
+      </view>
+      <view>
+        <view wx:if="{{item.orderStatus==3}}" class="status-btn orange">已完成</view>
+        <view wx:if="{{item.orderStatus==1}}" class="status-btn blue">已支付</view>
+        <view wx:if="{{item.orderStatus==2}}" class="status-btn green">已发货</view>
+        <view wx:if="{{item.orderStatus==6}}" class="status-btn gray">已退款</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

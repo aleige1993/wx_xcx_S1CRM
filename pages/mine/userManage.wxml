@@ -1,0 +1,42 @@
+<view class="container">
+  <view>
+  <wux-search-bar showCancel="false" wux-class="searchBar" value="{{ searchKey }}" controlled placeholder="请输入关键字" bind:confirm="searchComfirmEvent" />
+  </view>
+  <refresher bind:refresh="onRefresh" id="refresher1" bind:loadMore="loadMore" noData="{{showList.length==0}}">
+    <view wx:if="{{showList.length>0}}" class="list-container" wx:for="{{showList}}" wx:key="{{item.id}}">
+      <view class='start_flex list' bindtap='onLabelTap' data-obj="{{item}}">
+        <view class='badge'>
+          <!-- 测试图片 https://picsum.photos/750/750/?random&s=2 -->
+          <image class="image" src="{{item.pic}}" loading="Loading" />
+        </view>
+
+        <view class='info'>
+          <view class='lr_flex'>
+            <text class='name'>{{item.linkName}}</text>
+            <text class='time'>{{item.createTime}}</text>
+          </view>
+          <view>
+            <text class='text'>{{item.userTypeStr}}</text>
+            <text class='text phone'>{{item.phone}}</text>
+          </view>
+          <view>
+            <text class='text compnay'>{{item.company}}</text>
+          </view>
+          <view class='address'>
+            <wux-icon type="ios-pin" size='18' color="#aaa" />
+            <text class='text'>{{item.address}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='start_flex order'>
+        <view>订单总数: {{item.orderTotal}}笔</view>
+        <view>订单总金额: {{item.orderMax}}元</view>
+      </view>
+      <view class='start_flex order'>
+        <view>本品类订单金额: {{item.torderDTO.ownerSUM}}元</view>
+        <view>非本品类订单金额: {{item.torderDTO.notOwnerSUM}}元</view>
+      </view>
+      <wux-white-space size="default" />
+    </view>
+  </refresher>
+</view>

@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="brand-item {{brandId==''?'choose':''}}" bindtap='chooseBrand'  data-brandId="" data-brandName="不限">
+    <image src="../../static/images/brand_default_icon.png" style="width:80rpx; height:80rpx;"></image>
+    <view>不限</view>
+  </view>
+  <view class="brand-item {{brandId==item.id?'choose':''}}" wx:for="{{brandArr}}" bindtap='chooseBrand' data-brandId="{{item.id}}" data-brandName="{{item.name}}">
+    <image src="{{item.iconPath}}" style="width:80rpx; height:80rpx;"></image>
+    <view >{{item.name}}</view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wux-refresher": "../../ui-plugins/wux/refresher/index"
+  },
+  "navigationBarTitleText": "应收账款"
+}

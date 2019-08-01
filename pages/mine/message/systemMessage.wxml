@@ -1,0 +1,20 @@
+<!--pages/mine/message/systemMessage.wxml-->
+<view class="container">
+  <refresher bind:refresh="onRefresh" id="refresher" bind:loadMore="onLoadMore" noData="{{pageData.length==0}}">
+    <view class="no_data_view" wx:if="{{pageData.total == 0}}">
+      暂无数据
+    </view>
+    <view class="item_layout_view" wx:for="{{messageData}}" wx:key="{{index}}">
+      <view class="msg_time_view">
+        <text>{{item.createTime}}</text>
+      </view>
+      <view class="msg_content_view">
+        <text style="color:black;">{{item.title}}</text>
+        <view class="msg_content_text_view">
+          <text>{{item.desc}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="no-more" wx:if="{{pageData.total != 0 && pageIndex == pageData.pageCount}}">没有更多数据</view>
+  </refresher>
+</view>

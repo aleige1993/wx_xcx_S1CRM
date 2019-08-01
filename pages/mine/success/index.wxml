@@ -1,0 +1,9 @@
+<!--pages/mine/success/index.wxml-->
+<view>
+  <view class='center'>
+    <zicon type="chenggong" size="80" color="#1afa29"></zicon>
+    <text>上传资料成功, 请等待审核!</text>
+  </view>
+  <wux-white-space size="large" />
+  <wux-button block type="positive" bind:click="onButtonClick">完成</wux-button>
+</view>

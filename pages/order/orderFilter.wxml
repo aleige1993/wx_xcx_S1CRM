@@ -1,0 +1,44 @@
+
+<view class="container">
+  <view class="page__bd">
+
+
+    <wux-cell hover-class="none">
+      <wux-input label="公司名" placeholder='请输入公司名' clear="true" controlled="true" value ="{{companyName}}" bind:change="changeName" bind:clear="clearName" class="text-right"/>
+    </wux-cell>
+    
+    <wux-cell hover-class="none" bindtap="goTag" data-tag="1">
+    <view class="flex">
+      <text>品牌查询</text>
+      <view class="flex1 text-right">{{brandName}}</view>
+      <text class="iconfont icon-right"></text>
+      </view>
+    </wux-cell>
+    <wux-cell hover-class="none" bindtap="goTag" data-tag="2">
+    <view class="flex">
+      <text>分类查询</text>
+     <view class="flex1 text-right"> {{categoryCodesName}}</view>
+      <text class="iconfont icon-right "></text>
+      </view>
+    </wux-cell>
+     <wux-cell hover-class="none" bindtap="goTag" data-tag="3">
+     <view class="flex">
+      <text >销售区域查询</text>
+      <view class="flex1 text-right">{{areaCodeName}}</view>
+      <text class="iconfont icon-right "></text>
+      </view>
+    </wux-cell>
+    <wux-cell hover-class="none" bindtap="goTag" data-tag="4">
+    <view class="flex">
+      <text wx:if="{{belongIdsName==''}}">业务员/团队/经销商/服务商</text>
+      <view class="flex1 text-right">{{belongIdsName}}</view>
+      <text class="iconfont icon-right "></text>
+      </view>
+    </wux-cell>
+  <classify-filter wx:if="{{categoryStatus}}" brandId="{{brandId}}" categoryCodes="{{categoryCodes}}" bind:closeCatogory="closeCatogory" bind:changeCategoryCodes="changeCategoryCodes"></classify-filter>
+  </view>
+  <view class="flex">
+  <view class="btn clear" bindtap='clearFilter'>清空</view>
+  <view class="btn" bindtap='searchFilter'>查询</view>
+  </view>
+</view>

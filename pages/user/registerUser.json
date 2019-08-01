@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "用户数据",
+  "usingComponents": {
+    "refresher": "../../../components/refresh-scroll-view/index"
+  }
+}

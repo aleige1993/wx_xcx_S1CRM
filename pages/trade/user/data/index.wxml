@@ -1,0 +1,36 @@
+<!--pages/trade/user/data/index.wxml-->
+<view>
+  <wux-cell-group>
+    <wux-cell hover-class="none">
+      <wux-input clear label="公司名" controlled value='{{form.company}}' bind:change="onChange" data-field='company' />
+    </wux-cell>
+    <wux-cell hover-class="none">
+      <wux-input clear label="联系人" controlled value='{{form.linkName}}' bind:change="onChange" data-field='linkName'/>
+    </wux-cell>
+    <wux-cell hover-class="none">
+      <wux-input clear label="联系电话" controlled value='{{form.phone}}' bind:change="onChange" data-field='phone' />
+    </wux-cell>
+    <wux-cell hover-class="none">
+      <wux-input clear label="业务员名字" controlled value='{{form.salesmanName}}'bind:change="onChange" data-field='salesmanName' />
+    </wux-cell>
+    <wux-cell title="系统标签" wux-class="system-label" extra="{{ systemLabelStr }}" bind:click="onLabelClick"></wux-cell>
+    <!-- <wux-cell title="自定义标签" extra="{{ title1 }}" bind:click="onClick1"></wux-cell> -->
+    <wux-cell title="注册时间范围" extra="{{ time }}" bind:click="openCalendar"></wux-cell>
+    <wux-cell title="交易次数范围">
+      <view class="lr_flex num">
+        <wux-input-number color="positive" default-value="{{ form.tradeNumBegin }}" min="0" longpress bind:change="onNumChange" data-str="tradeNumBegin" /> ~
+        <wux-input-number color="positive" default-value="{{ form.tradeNumEnd }}" min="0" longpress bind:change="onNumChange" data-str="tradeNumEnd" />
+      </view>
+
+    </wux-cell>
+
+    <wux-checkbox-group name="c" value="{{ form.isTrade }}" title="是否交易" bind:change="onCheckboxChange">
+      <wux-checkbox title="已交易" value="1" />
+      <wux-checkbox title="未交易" value="0" />
+    </wux-checkbox-group>
+    <wux-button block type="positive" bind:click="getConditionClick">筛选</wux-button>
+  </wux-cell-group>
+
+  <wux-select id="wux-select" />
+  <wux-calendar id="wux-calendar" />
+</view>

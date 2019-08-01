@@ -1,0 +1,58 @@
+/* pages/order/userOrderDetail.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.scroll-box{
+  flex: 1;
+  height: 0;
+}
+
+scroll-view{
+  background: #fff;
+  border-top:1rpx solid #ddd;
+  height: 100vh;
+}
+.order-item{
+  border-bottom: 1rpx solid #ddd;
+  padding:20rpx 50rpx 20rpx 10rpx;
+  position: relative;
+  line-height: 40rpx;
+}
+.right-icon{
+  width:28rpx;
+  position: absolute;
+  top:50%;
+  right:10rpx;
+}
+.order-title{
+  font-size:32rpx;
+}
+.order-title .gray{
+  font-size: 26rpx;
+}
+.status-btn{
+  padding:10rpx 20rpx;
+  color:#fff;
+  border-radius: 20rpx;
+}
+
+.status-btn.blue{
+  background: cyan;
+}
+
+.status-btn.orange{
+  background:orange;
+}
+
+.status-btn.gray{
+  background:#999;
+}
+
+.status-btn.green{
+  background: chartreuse;
+}
+
+.flex1 > view {
+  padding: 6rpx 0;
+}

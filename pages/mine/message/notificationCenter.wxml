@@ -1,0 +1,27 @@
+<!--pages/mine/message/notificationCenter.wxml-->
+<view class="container">
+  <view class="root_layout" bindtap="goOrderMessagePage">
+    <view class="msg_item_layout">
+      <text class="iconfont icon-ziliao" style="color:#2F8DFE;font-size:120rpx"></text>
+      <view class="msg_info_layout">
+        <view style='flex-direction:row;justify-content: space-between;display:flex'>
+          <text>订单消息</text>
+          <text wx:if="{{orderMsg.createTime}}">{{orderMsg.createTime}}</text>
+        </view>
+        <text wx:if="{{orderMsg.desc}}" class="msg_text_view">{{orderMsg.desc}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="root_layout" bindtap="goSystemMessagePage">
+    <view class="msg_item_layout">
+      <text class="iconfont icon-shezhi2" style="color:#2F8DFE;font-size:110rpx"></text>
+      <view class="msg_info_layout">
+        <view style='flex-direction:row;justify-content: space-between;display:flex'>
+          <text>系统消息</text>
+          <text  wx:if="{{systemMsg.createTime}}">{{systemMsg.createTime}}</text>
+        </view>
+        <text wx:if="{{systemMsg.desc}}" class="msg_text_view">{{systemMsg.desc}}</text>
+      </view>
+    </view>
+  </view>
+</view>

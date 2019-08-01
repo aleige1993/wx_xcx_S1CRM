@@ -1,0 +1,64 @@
+/* pages/trade.wxss */
+
+.trade-info {
+  color: #fff;
+  text-align: center;
+  line-height: 30rpx;
+}
+
+.info-cell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid rgba(255, 255, 255, 0.2);
+}
+
+.trade-info .info-cell:first-child {
+  border-right: 2rpx solid rgba(255, 255, 255, 0.2);
+}
+
+.trade-info .info-cell:last-child {
+  border-right: none;
+}
+
+.info-cell>view:first-child {
+  padding: 10rpx 0;
+  font-size: 24rpx;
+}
+
+.info-cell>view:last-child {
+  font-size: 32rpx;
+}
+
+.trade-user-title {
+  padding: 15rpx 30rpx;
+}
+
+.user-title>view:first-child {
+  padding: 0 10rpx;
+}
+
+.user-info {
+  background: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+.user-info .info-cell {
+  border: 2rpx solid #ddd;
+  border-left: none;
+}
+
+.user-info .info-cell>view:first-child {
+  color: #707070;
+  padding: 10rpx 0;
+}
+
+.getMoney {
+  font-size: 34rpx;
+  border: 2rpx solid #ddd;
+  padding: 20rpx 30rpx;
+  background: #fff;
+}

@@ -1,0 +1,65 @@
+<view class="container">
+  <wux-tabs controlled current="{{ current }}" theme="positive" bind:change="onTabsChange">
+    <wux-tab key="1" title="我的"></wux-tab>
+    <wux-tab key="2" title="团队"></wux-tab>
+    <wux-tab key="3" title="经销商"></wux-tab>
+    <wux-tab key="4" title="服务商"></wux-tab>
+  </wux-tabs>
+
+  <wux-white-space size="default" />
+
+  <view class="trade-info bg">
+    <view class="flex">
+      <view class='info-cell'>
+        <view>交易总金额(元)</view>
+        <view>{{trade.orderMoneyCount}}</view>
+      </view>
+    </view>
+    <view class="flex">
+      <view class='info-cell'>
+        <view>交易订单数(个)</view>
+        <view>{{trade.orderCount}}</view>
+      </view>
+      <view class='info-cell'>
+        <view>单店产出(元)</view>
+        <view>{{trade.singleOutput}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view bindtap='userInfoTapEvent'>
+    <view class='lr_flex trade-user-title'>
+      <view class='flex'>
+        <view class='iconfont icon-user'></view>
+        <text style="margin-left:10px;">用户信息</text>
+      </view>
+      <view class='iconfont icon-right'></view>
+    </view>
+    <view class="user-info flex">
+      <view class="info-cell">
+        <view>注册用户数</view>
+        <view>{{trade.registerUserCount}}</view>
+      </view>
+      <view class="info-cell">
+        <view>交易用户数</view>
+        <view>{{trade.dealUserCount}}</view>
+      </view>
+      <view class="info-cell">
+        <view>交易渗透率</view>
+        <view>{{trade.tradeRate}}</view>
+      </view>
+    </view>
+  </view>
+
+  <wux-white-space size="default" />
+  <!-- 2019.03.27 按需求去掉应收账款  -->
+  <!-- <view bindtap='shouldGetMoneyTapEvent' class='getMoney lr_flex'>
+    <text>应收账款</text>
+    <view class='lr_flex'>
+      <text>{{trade.loansReceivable}}</text>
+      <view class='iconfont icon-right'></view>
+    </view>
+  </view> -->
+
+  <common-tabbar activeKey="trade"></common-tabbar>
+</view>

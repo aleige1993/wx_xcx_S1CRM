@@ -1,0 +1,8 @@
+<view class="container">
+<view class="info">
+<view class="iconfont icon-zhifuchenggong">
+</view>
+<view>上传资料成功,请等待审核</view>
+</view>
+  <view class="btn">完成</view>
+</view>

@@ -1,0 +1,64 @@
+/* components/searchHistory.wxss */
+.content{
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100%;
+  width:100%;
+  z-index:2;
+}
+.shadow{
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.box{
+  padding:20rpx;
+  background: #fff;
+}
+.item-box{
+  width: 33%;
+   display: inline-block;
+
+}
+.item{
+  display: inline-block;
+  margin-left:50%;
+  transform: translateX(-60rpx);
+  text-align: center;
+  line-height: 60rpx;
+  width:120rpx;
+  border:1rpx solid #ddd;
+  margin-right:20rpx;
+  margin-bottom:20rpx;
+  border-radius: 34rpx;
+ 
+ 
+}
+.choose{
+  border-color:#2F8DFE;
+  color:#2F8DFE;
+}
+.time-box{
+  padding:20rpx;
+  border-top:1rpx solid #ddd;
+}
+picker{
+  display: inline-block;
+}
+.flex{
+  display: flex
+}
+.flex1{
+  flex:1;
+}
+.search-btn{
+  padding:10rpx 20rpx;
+  color:#fff;
+  background: #2F8DFE;
+  border-radius: 10rpx;
+  
+}
+

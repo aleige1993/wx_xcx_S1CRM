@@ -1,0 +1,16 @@
+/* pages/mine/safetySettings.wxss */
+.input_layout {
+  background: #fff;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-top: 5rpx;
+  padding-bottom: 30rpx;
+}
+.password_input_view {
+  padding-left: 30rpx;
+  height: 80rpx;
+  border: 1rpx solid #D9D9D9;
+  border-radius: 10rpx;
+  margin-top: 25rpx;
+  flex: 1;
+}

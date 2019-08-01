@@ -1,0 +1,37 @@
+/* pages/trade/money/index.wxss */
+.current-money {
+  background: #2F8DFE;
+  color: #FFF;
+  padding: 30rpx 0;
+  border: 2rpx solid rgba(255, 255, 255, 0.2);
+}
+
+.current-money > text:first-child{
+  font-size: 24rpx;
+  margin: 10rpx 0;
+}
+
+.current-money > text:last-child{
+  font-size: 36rpx;
+}
+
+.money-list {
+  font-size: 24rpx;
+  /* background: #fff; */
+  position: relative;
+}
+
+.money-list .title{
+  background: #ccc;
+  border: 2rpx solid #ddd;
+  padding: 15rpx 30rpx;
+}
+
+.money-list .list-item {
+  padding: 40rpx 30rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.list-container{
+  height: 1000rpx;
+}

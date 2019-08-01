@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "上传商户资料",
+  "usingComponents": {
+      "wux-cell-group": "../../ui-plugins/wux/cell-group/index",
+      "wux-cell": "../../ui-plugins/wux/cell/index",
+      "wux-input": "../../ui-plugins/wux/input/index"
+  }
+}

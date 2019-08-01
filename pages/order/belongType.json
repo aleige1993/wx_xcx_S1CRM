@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "订单数据",
+  "usingComponents": {
+    "wux-tabs": "../../ui-plugins/wux/tabs/index",
+    "wux-tab": "../../ui-plugins/wux/tab/index",
+    "type-rule":"../../components/typeRule"
+  }
+}

@@ -1,0 +1,67 @@
+<view class="container ">
+
+  <view class="bg-white">
+    <view class="border-bottom flex text-center padding">
+      <view class="flex1">
+        <view class="gray">订单数</view>
+        <view class="orange">{{orderData.orderCount||0}}</view>
+      </view>
+      <view class="flex1">
+        <view class="gray">交易客户数</view>
+        <view class="orange">{{orderData.dealUserCount||0}}</view>
+      </view>
+      <view class="flex1">
+        <view class="gray">订单金额</view>
+        <view class="orange">{{orderData.orderMoneyCount||0}}</view>
+      </view>
+    </view>
+    <view class="border-bottom flex text-center padding" >
+      <view class="flex1" bindtap='searchOrderStatus' data-status='1'>
+        <view class="iconfont icon-zhifuchenggong"></view>
+        <view>{{orderData.orderPayedCount||0}}</view>
+        <view class="gray">已支付</view>
+      </view>
+      <view class="flex1" bindtap='searchOrderStatus' data-status='2'>
+        <view class="iconfont icon-fahuo"></view>
+        <view>{{orderData.orderDeliveryCount||0}}</view>
+        <view class="gray">已发货</view>
+      </view>
+      <view class="flex1" bindtap='searchOrderStatus' data-status='3'>
+        <view class="iconfont icon-completetheorder"></view>
+        <view>{{orderData.orderCompletedCount||0}}</view>
+        <view class="gray">已完成</view>
+      </view>
+      <view class="flex1" bindtap='searchOrderStatus' data-status='6'>
+        <view class="iconfont icon-tuikuan"></view>
+        <view>{{orderData.orderRefundCount||0}}</view>
+        <view class="gray">退款成功</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="order-title border-bottom">
+    <text>订单商品</text>
+    <view bindtap='filterOrder' class="right"><text>筛选</text><text class="iconfont icon-right"></text></view>
+  </view>
+  <view class="flex1 scroll-box">
+ 
+    <scroll-view style="height:100%" scroll-y="true" bindscrolltolower="bindscrolltolower">
+    <wux-refresher bind:refresh="onRefresh" id="wux-refresher" >
+      <view class="no-data" wx:if="{{!orderList.length ||pageData.total==0}}">暂无数据</view>
+      <view class="order-item flex" wx:for="{{orderList}}" wx:key="{{index}}">
+        <image style="width:160rpx; height:160rpx" src="{{item.smallPath}}"></image>
+        <view class="flex1 goods">
+          <view>{{item.goodsName}}</view>
+          <view>
+            <text>包装规格:</text>
+            <text>{{item.num}}{{item.unit}}</text>
+          </view>
+        </view>
+        <view class="number">X{{item.nums}}</view>
+      </view>
+      <view class="no-more" wx:if="{{pageData.total>0&&pageIndex == pageData.pageCount}}">{{total}}没有更多数据</view>
+       </wux-refresher>
+    </scroll-view>
+   
+  </view>
+</view>

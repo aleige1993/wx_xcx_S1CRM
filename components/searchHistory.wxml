@@ -1,0 +1,24 @@
+<!--components/searchHistory.wxml-->
+<view class="content" wx:if="{{showSearchBool}}">
+  <view class="shadow" bindtap="hideSearch"></view>
+  <view class="box">
+    <view wx:for="{{arry}}" class="item-box " wx:key="{{index}}">
+      <view class="item {{type==item.type?'choose':''}}" bindtap='chooseItem' data-type="{{item.type}}" data-text="{{item.text}}">{{item.text}} </view>
+    </view>
+    <view class="time-box flex">
+      <picker mode="date" value="{{startDate}}" start="2015-09-01" end="{{end}}" catchchange="bindStartDateChange" class="flex1">
+        <view class="picker">
+          开始时间: {{startDate}}
+        </view>
+      </picker>
+      <picker mode="date" value="{{endDate}}" start="2015-09-01" end="{{end}}" catchchange="bindEndDateChange" class="flex1">
+        <view class="picker">
+          结束时间: {{endDate}}
+        </view>
+      </picker>
+      <view class="search-btn" bindtap="searchTime">搜索</view>
+    </view>
+  </view>
+
+
+</view>

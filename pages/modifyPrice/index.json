@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "refresher": "../../ui-plugins/wux/refresher/index",
+    "wux-search-bar": "../../ui-plugins/wux/search-bar/index",
+    "wux-white-space": "../../ui-plugins/wux/white-space/index",
+    "wux-icon": "../../ui-plugins/wux/icon/index",
+    "wux-button": "../../ui-plugins/wux/button/index"
+  },
+  "navigationBarTitleText": "改价"
+}

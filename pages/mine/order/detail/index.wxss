@@ -1,0 +1,97 @@
+/* pages/mine/order/detail/index.wxss */
+.head{
+  margin: 20rpx 0;
+  padding: 30rpx;
+  background-color: #fff;
+}
+.head .orderNo{
+  margin: 0 20rpx;
+}
+.head .time {
+  font-size: 24rpx;
+  color: #aaa;
+}
+.list {
+  background: #fff;
+  padding: 30rpx 0;
+  width: 100%;
+  margin: 30rpx 0;
+}
+
+.list .image{
+  width: 150rpx;
+  height: 150rpx;
+  box-sizing: border-box;
+  border-radius: 100rpx;
+  flex: 0 0 auto;
+  margin: 0 30rpx;
+}
+
+.list.product {
+  border-bottom: 2rpx solid #ddd;
+}
+
+.list.product .image{
+  border-radius: 0;
+  width: 200rpx;
+}
+
+.product .detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list .info,
+.product .detail{
+  flex: 1;
+  width: 0;
+}
+
+.list .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list .info> view {
+  padding: 4rpx;
+}
+
+.list .text{
+  display: inline-block;
+  /* max-width: 300rpx; */
+  font-size: 28rpx;
+}
+.list .text2 {
+  font-size: 24rpx;
+}
+.list .text.weight{
+  font-weight: 600;
+}
+
+.list .margin {
+  margin: 0 20rpx;
+}
+
+.list .margin2{
+  margin: 0 40rpx;
+}
+
+.list .address {
+  display: flex;
+}
+.list .ellipsis{
+  color: #aaa;
+  padding: 0 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;  
+}
+
+.start_flex {
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+}

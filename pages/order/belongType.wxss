@@ -1,0 +1,37 @@
+/* pages/order/belongType.wxss */
+
+.tab{
+ height: 100%;
+
+ background:#fff;
+ box-sizing: border-box;
+ display: flex;
+ flex-direction: column;
+}
+tab-page{
+height: 0;
+}
+scroll-view{
+  flex:1;
+}
+.btn{
+  position: fixed;
+  bottom:20rpx;
+}
+checkbox{
+  float: right;
+ align-items: center;
+  
+}
+.choose-all{
+  line-height: 80rpx;
+  border-top:1rpx solid #ddd;
+
+}
+.item{
+  padding:0 20rpx;
+  border-bottom:1rpx solid #ddd;
+}
+swiper,swiper-item{
+  height: 100%;
+}

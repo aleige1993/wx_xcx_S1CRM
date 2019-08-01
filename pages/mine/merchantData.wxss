@@ -1,0 +1,17 @@
+/* pages/mine/merchantData.wxss */
+.container{
+  background:#fff;
+}
+.btn{
+  margin-top:20rpx;
+}
+.text-right{
+  text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100rpx;
+}
+.label-text{
+  width: 220rpx;
+}

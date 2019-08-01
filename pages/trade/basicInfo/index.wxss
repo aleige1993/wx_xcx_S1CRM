@@ -1,0 +1,56 @@
+/* pages/trade/basicInfo/index.wxss */
+.container {
+  background: #fff;
+}
+.info {
+  padding: 20rpx;
+}
+.info>view {
+  padding: 10rpx;
+}
+.info .iconfont {
+  font-size: 28rpx;
+  color: #ddd;
+}
+.status {
+  padding: 30rpx;
+}
+.status>view .pass {
+  color: orange;
+}
+.info>view:first-child{
+  font-size: 28rpx;
+}
+.border-bottom {
+  border-bottom: 2rpx solid #ddd;
+}
+.text {
+  display: flex;
+  align-items: center;
+  color: #444;
+}
+.text>image {
+  margin-right: 15rpx;
+  flex-shrink: 1;
+}
+.text>view{
+  padding: 0 10rpx;
+  flex-shrink: 0;
+}
+.text>text{
+  margin-left: 15rpx;
+  word-wrap:break-word;
+}
+.text .justify{
+  /* text-align: justify; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.status {
+  display: flex;
+}
+
+.status>view {
+  width: 50%;
+}

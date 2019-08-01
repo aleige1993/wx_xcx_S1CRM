@@ -1,0 +1,26 @@
+<!--pages/trade/money/index.wxml-->
+<view>
+  <view class='tb_flex current-money'>
+    <text>当前应收账款</text>
+    <text>{{money}}</text>
+  </view>
+  <view class='money-list'>
+    <view class='title lr_flex'>
+      <text>公司名</text>
+      <text>账款信息</text>
+    </view>
+    <view class='list'>
+      <wux-refresher id="wux-refresher" bind:refresh="onRefresh">
+        <view class='empty' wx:if="{{moneyList.length==0}}">
+          <text>暂无数据</text>
+        </view>
+        <scroll-view wx:if="{{moneyList.length>0}}" scroll-y="true" class='list-container' bindscrolltolower="bindscrolltolower">
+        <view class='list-item lr_flex' wx:for="{{moneyList}}" wx:key="{{item.id}}">
+          <text>{{item.companyName}}</text>
+          <text>{{item.loansReceivable}}</text>
+        </view>
+        </scroll-view>
+      </wux-refresher>
+    </view>
+  </view>
+</view>

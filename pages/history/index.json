@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "历史-昨日",
+  "enablePullDownRefresh":true,
+  "usingComponents": {
+    "search-history": "../../components/searchHistory"
+  }
+}

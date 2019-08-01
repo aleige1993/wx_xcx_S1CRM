@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "zicon": "../../components/zicon/index"
+  },
+  "navigationBarTitleText": "个人中心"
+}

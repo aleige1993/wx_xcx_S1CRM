@@ -1,0 +1,10 @@
+/* pages/order/areaFilter.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.item{
+  line-height: 80rpx;
+  padding:0 20rpx;
+  border-bottom:1rpx solid #ddd;
+}

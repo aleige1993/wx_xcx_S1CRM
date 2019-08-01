@@ -1,0 +1,62 @@
+<view class="container">
+  <wux-tabs id="tabs" defaultCurrent="{{currentIndex}}" theme="positive" bind:change="switchTab">
+    <wux-tab key="-1" title="全部"></wux-tab>
+    <wux-tab wx:if="{{hasStatus}}" key="0" title="待结算"></wux-tab>
+    <wux-tab key="2" title="结算中"></wux-tab>
+    <wux-tab key="1" title="已结算"></wux-tab>
+  </wux-tabs>
+  <refresher class="refresh" bind:refresh="onRefresh" id="refresher" bind:loadMore="loadMore" noData="{{showList.length==0}}">
+
+    <view class="list-item" wx:for="{{showList}}" wx:key="{{item.orderNo}}">
+      <!-- <view class='flag' wx:if="{{item.payChannel == 1}}">
+        <view class='triangle_border_up_left'></view>
+        <text>支付宝</text>
+      </view>
+      <view class='flag' wx:if="{{item.payChannel == 2}}">
+        <view class='triangle_border_up_left green'></view>
+        <text>微信支付</text>
+      </view>
+      <view class='flag' wx:if="{{item.payChannel == 3}}">
+        <view class='triangle_border_up_left'></view>
+        <text>银联手机</text>
+      </view>
+      <view class='flag' wx:if="{{item.payChannel == 4}}">
+        <view class='triangle_border_up_left'></view>
+        <text>BB支付</text>
+      </view>
+      <view class='flag' wx:if="{{item.payChannel == 5}}">
+        <view class='triangle_border_up_left'></view>
+        <text>银联B2C</text>
+      </view>
+      <view class='flag' wx:if="{{item.payChannel == 6}}">
+        <view class='triangle_border_up_left'></view>
+        <text>银联B2B</text>
+      </view>
+      <view class='flag' wx:if="{{item.payChannel == 7}}">
+        <view class='triangle_border_up_left'></view>
+        <text>商银时代</text>
+      </view> -->
+      <view class='content' bindtap='showDetail' data-item="{{item}}">
+        <view class="lr_flex">
+          <view class='text'>
+            <text class='col'>订单号:</text> {{item.orderNo}}</view>
+          <view class='time'>{{item.createTime}}</view>
+        </view>
+        <view class="lr_flex">
+          <view class='start_flex'>
+            <text class='name col'>{{item.userName}}</text>
+            <text class='text limit'>{{item.company}}</text>
+          </view>
+          <view class='text'>共{{item.goodsNum}}件商品</view>
+        </view>
+        <view class="lr_flex border-top">
+          <view class='text'>合计：￥ {{item.totalPrice}}</view>
+          <view wx:if="{{item.settledState == 0}}" class="order-btn blue" catchtap='onBindTap' data-item='{{item}}'>结算</view>
+          <view wx:if="{{item.settledState == 1}}" class="order-btn gray">已结算</view>
+          <view wx:if="{{item.settledState == 2}}" class="order-btn orange">结算中</view>
+        </view>
+      </view>
+    </view>
+    <view class="no-more" wx:if="{{pageData.total>0&&pageIndex == pageData.pageCount}}">{{total}}没有更多数据</view>
+  </refresher>
+</view>

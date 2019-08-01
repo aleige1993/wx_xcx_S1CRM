@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="title item">{{provinceName}}>{{cityName}}
+    <view wx:if="{{canAll}}" class="right" bindtap="chooseAll">全选</view>
+  </view>
+  <view class="scroll-box flex1">
+    <scroll-view scroll-y="true" style="height:100%">
+      <checkbox-group wx:if="{{canAll}}" bindchange="chooseCheckbox">
+        <view class="item" wx:for="{{districtData}}" wx:key="{{item.id}}">
+          <text>{{item.areaName}}</text>
+
+          <checkbox class='right' checked='{{item.checked}}' value="{{item.id}}" color="#2F8DFE"></checkbox>
+
+        </view>
+      </checkbox-group>
+
+      <radio-group wx:if="{{!canAll}}" bindchange="chooseRadio">
+        <view class="item" wx:for="{{districtData}}" wx:key="{{item.id}}">
+          <text>{{item.areaName}}</text>
+
+          <radio class='right' value="{{item.id}}" color="#2F8DFE"></radio>
+
+        </view>
+      </radio-group>
+    </scroll-view>
+  </view>
+  <view class="btn" bindtap='sureChooseDistrict'>确定</view>
+</view>

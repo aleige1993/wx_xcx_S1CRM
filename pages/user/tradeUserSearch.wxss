@@ -1,0 +1,16 @@
+/* pages/user/tradeUserSearch.wxss */
+.container{
+  background: #fff;
+}
+.btn{
+  margin-top:20rpx;
+  margin-bottom:20rpx;
+}
+.icon-right{
+  color:#aeaeae;
+  float:right;
+}
+picker{
+  display: inline-block;
+}
+

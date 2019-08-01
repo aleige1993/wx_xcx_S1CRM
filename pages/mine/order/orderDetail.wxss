@@ -1,0 +1,13 @@
+/* pages/mine/order/orderDetail.wxss */
+.price .wux-cell__ft{
+  color: rgba(229, 28, 35, 1);
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  background-color: #f7c479;
+  color: #ff6600;
+  border: 2rpx solid #ff6600;
+  border-radius: 6rpx;
+}

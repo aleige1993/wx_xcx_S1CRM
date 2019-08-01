@@ -1,0 +1,44 @@
+<!--pages/mine/order/detail/index.wxml-->
+<view>
+  <view class='head'>
+    <view>订单号: <text class='orderNo'>{{orderNo}}</text></view>
+    <view class='time'>{{order.crTime}}</view>
+  </view>
+
+  <view class='start_flex list'>
+    <view class='badge'>
+      <!-- 测试图片 https://picsum.photos/750/750/?random&s=2 -->
+      <image class="image" src="{{order.pic}}" loading="Loading" />
+    </view>
+
+    <view class='info'>
+      <view class='lr_flex'>
+        <view><text class='text weight'>{{order.linkName}}</text><text class='text2 margin2'>{{order.userTypeStr}}</text></view>
+        <text class='text2 margin'>{{order.phone}}</text>
+      </view>
+      <view>
+        <text class='text2 compnay'>{{order.company}}</text>
+      </view>
+      <view class='address'>
+        <zicon type="dizhi" size='18' color="#aaa" />
+        <text class='text ellipsis'>{{order.address}}</text>
+      </view>
+    </view>
+  </view>
+
+  <scroll-view>
+    <view class='start_flex list product' wx:for="{{showList}}" wx:key="{{item.id}}">
+      <view class='badge'>
+        <!-- 测试图片 https://picsum.photos/750/750/?random&s=2 -->
+        <image class="image" src="{{item.smallPath}}" loading="Loading" />
+      </view>
+      <view class='detail'>
+        <view class='text weight'>{{item.goodsName}}</view>
+        <view class='lr_flex'>
+          <text class='text'>￥ {{item.price}}</text>
+          <text class='text margin2'>X {{item.nums}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

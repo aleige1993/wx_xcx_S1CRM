@@ -1,0 +1,170 @@
+/* pages/modifyPrice/product/index.wxss */
+.search {
+  
+}
+
+.list-container {
+  height: 1100rpx;
+  background: #eee;
+}
+
+.list {
+  position: relative;
+  background: #fff;
+  padding: 30rpx 0;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+.list.active{
+  opacity: .7;
+}
+
+.list .auditing{
+  background-color: #ff9900;
+  color: #fff;
+  padding: 6rpx 10rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.list .image{
+  width: 180rpx;
+  height: 200rpx;
+  flex: 0 0 auto;
+}
+
+.list .info{
+  flex: 1;
+  width: 0;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-content: space-between; */
+  align-items: stretch; 
+}
+.list .list-checkbox{
+  margin-left: 20rpx;
+}
+
+.list-checkbox.unchecked{
+  display: none;
+}
+.list-checkbox.checked{
+  display: inline-block;
+}
+
+.list .text{
+  display: inline-block;
+  /* max-width: 300rpx; */
+  font-size: 24rpx;
+}
+
+.list .text:last-child {
+  margin: 0 20rpx;
+}
+
+.list .badge {
+  position: relative;
+  margin: 0 30rpx;
+}
+
+.list .address .text{
+  color: #aaa;
+  padding: 0 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;  
+}
+.list-container .price {
+  background: #fff;
+  color: #2F8DFE;
+  font-size: 24rpx;
+}
+.list-container .price>view {
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 10rpx 30rpx;
+}
+
+.list-container .order>view:first-child{
+  border-right: 1px solid #ddd;
+}
+
+.start_flex {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.rl_flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: flex-end;
+  color: #707070;
+}
+
+.dialog-header > text {
+  display: inline-block;
+  width: 36rpx;
+  height: 36rpx;
+  border: 2rpx solid #707070;
+  border-radius: 24rpx;
+
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}
+
+.dialog-content>view {
+  display: flex;
+  padding: 20rpx 0;
+}
+
+.dialog-content .price{
+  margin: 0 20rpx;
+  min-width: 1rpx;
+}
+
+.dialog-content input.price {
+  border-bottom: 2rpx solid #ddd;
+  width: 160rpx;
+  text-align: right;
+}
+
+.dialog-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  padding: 20rpx 0;
+}
+
+.dialog-footer>view{
+  width: 45%;
+  padding: 20rpx 0;
+}
+
+.dialog-footer .button-cancle {
+  border: 2rpx solid #ddd;
+  background: #fff;
+}
+
+.dialog-footer .button-yes {
+  color: #fff;
+  background: #2F8DFE;
+  border-bottom: 2rpx solid #2F8DFE;
+}

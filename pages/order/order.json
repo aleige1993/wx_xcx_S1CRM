@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "订单数据",
+  "usingComponents": {
+    "wux-refresher": "../../ui-plugins/wux/refresher/index"
+  }
+}

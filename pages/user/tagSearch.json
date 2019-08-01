@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "筛选",
+  "usingComponents": {
+    "wux-checkbox": "../../ui-plugins/wux/checkbox/index"
+  }
+}

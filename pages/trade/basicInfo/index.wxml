@@ -1,0 +1,48 @@
+<!--pages/trade/basicInfo/index.wxml-->
+<view class='container'>
+  <view class='border-bottom info'>
+    <view>{{user.companyName}}</view>
+    <view class='text'>
+      <z-icon type="-yonghu" size="16" color="#ddd"></z-icon>
+      <view class='justify'><text>联</text><text>系</text><text>人</text></view>: 
+      <text>{{user.linkName}}</text>
+    </view>
+    <view class='text'>
+      <z-icon type="dianhua" size="16" color="#ddd"></z-icon>
+      <view>联系电话: </view>
+      <text>{{user.phone}}</text>
+    </view>
+    <view class='text'>
+      <z-icon type="shijian" size="16" color="#ddd"></z-icon>
+      <view>注册时间: </view>
+      <text>{{user.registerTime}}</text>
+    </view>
+    <view class='text'>
+      <z-icon type="dizhi" size="16" color="#ddd"></z-icon>
+      <view>公司地址: </view>
+      <text>{{user.address}}</text>
+    </view>
+  </view>
+  <view class='border-bottom info'>
+    <view class='text'>
+      <z-icon type="yonghuleixing" size="18" color="#ddd"></z-icon>
+      <view>用户类型: </view>
+      <text>{{user.userTypeStr}}</text>
+    </view>
+    <view class='text'>
+      <z-icon type="qudao" size="14" color="#ddd"></z-icon>
+      <view>用户渠道: </view>
+      <text>{{user.status == 1? '网站': '手机端'}}</text>
+    </view>
+  </view>
+  <view class='status'>
+    <view class='text'>
+      <view>平台状态: </view>
+      <text class='pass'>{{user.status == 1? '冻结': '正常'}}</text>
+    </view>
+    <view class='text'>
+      <view>审核状态: </view>
+      <text class='pass'>{{user.idcardStatusStr}}</text>
+    </view>
+  </view>
+</view>

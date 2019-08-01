@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="tab">
+    <wux-tabs defaultCurrent="{{currentIndex}}" theme="positive" bind:change="switchTab">
+      <wux-tab key="0" title="业务员"></wux-tab>
+      <wux-tab key="1" title="团队"></wux-tab>
+      <wux-tab key="2" title="经销商"></wux-tab>
+      <wux-tab key="3" title="服务商"></wux-tab>
+    </wux-tabs>
+    <view class="scroll-box">
+      <swiper current="{{currentIndex}}">
+        <swiper-item>
+          <type-rule listData="{{salesman}}" typeIndex="{{currentIndex+1}}" bind:getChosedData="getChosedData" wx:if="{{salesman.length>0}}"></type-rule>
+        </swiper-item>
+        <swiper-item>
+           <type-rule listData="{{team}}" typeIndex="{{currentIndex+1}}" bind:getChosedData="getChosedData" wx:if="{{team.length>0}}"></type-rule>
+        </swiper-item>
+        <swiper-item>
+          <type-rule listData="{{dealer}}" typeIndex="{{currentIndex+1}}" bind:getChosedData="getChosedData" wx:if="{{dealer.length>0}}"></type-rule>
+        </swiper-item>
+        <swiper-item>
+          <type-rule listData="{{service}}" typeIndex="{{currentIndex+1}}" bind:getChosedData="getChosedData" wx:if="service.length>0"></type-rule>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <!-- <view class="btn" bindtap='sureRoleChoose'>确定</view> -->
+</view>

@@ -1,0 +1,40 @@
+/* pages/user/registerUser.wxss */
+.container{
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.user-info{
+  border-top:1rpx solid #ddd;
+  color:#fff;
+  text-align: center;
+}
+.border-left{
+  border-left:1rpx solid #ddd;
+}
+.user-info>view{
+  padding:30rpx;
+}
+scroll-view{
+  border-top:1rpx solid #ddd;
+}
+
+.user-info-title,.user-item{
+  line-height: 60rpx;
+  padding: 0 20rpx;
+}
+.user-item{
+  border-bottom:1rpx solid #ddd;
+}
+.user-item:last-child{
+  border:none;
+}
+.row>view{
+  display: inline-block;
+}
+.row>view:first-child{
+  width:40%;
+}
+.row>view:last-child{
+  width:60%;
+}

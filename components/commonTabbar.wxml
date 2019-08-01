@@ -1,0 +1,23 @@
+<!--components/commonTabbar.wxml-->
+   <wux-tabbar defaultCurrent="{{activeKey}}" theme="positive" position="bottom" bind:change="changeTabbar">
+            <wux-tabbar-item title="今日" key="today">
+                <wux-icon wux-class="icon" type="ios-time" size="22" slot="icon-on" />
+                <wux-icon wux-class="icon" type="ios-time" size="22" slot="icon-off" />
+            </wux-tabbar-item>
+            <wux-tabbar-item title="历史" key="history">
+                <wux-icon wux-class="icon" type="ios-time" size="22" slot="icon-on" />
+                <wux-icon wux-class="icon" type="ios-time" size="22" slot="icon-off" />
+            </wux-tabbar-item>
+            <wux-tabbar-item title="改价" key="modifyMoney" wx:if="{{hasPrice}}">
+                <wux-icon wux-class="icon" type="ios-brush" size="22" slot="icon-on" />
+                <wux-icon wux-class="icon" type="ios-brush" size="22" slot="icon-off" />
+            </wux-tabbar-item>
+             <wux-tabbar-item title="生意" key="trade">
+                <wux-icon wux-class="icon" type="ios-heart-half" size="22" slot="icon-on" />
+                <wux-icon wux-class="icon" type="ios-heart-half" size="22" slot="icon-off" />
+            </wux-tabbar-item>
+             <wux-tabbar-item title="我的" key="mine">
+                <wux-icon wux-class="icon" type="ios-contact" size="22" slot="icon-on" />
+                <wux-icon wux-class="icon" type="ios-contact" size="22" slot="icon-off" />
+            </wux-tabbar-item>
+        </wux-tabbar>

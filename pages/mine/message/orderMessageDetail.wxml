@@ -1,0 +1,18 @@
+<!--pages/mine/message/orderMessageDetail.wxml-->
+<view class="order-container">
+  <view class="user_info"> 
+   <view class="userName">
+      <text class="iconfont icon-cc-users"></text>
+      <text>{{detailData.userName}}</text>
+    </view>
+     <view class="userPhone">
+      <text class="iconfont icon-cc-users"></text>
+      <text>{{detailData.userPhone}}</text>
+    </view>
+  </view>
+  <view class='order-content'>
+    <view>订单编号:<text>{{detailData.orderNo}}</text></view>
+    <view>订单金额:<text>￥{{detailData.orderMoney}}</text></view>
+    <view>现金支付:<text>￥{{detailData.moneyPayed}}</text></view>
+  </view>
+</view>

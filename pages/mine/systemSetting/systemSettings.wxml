@@ -1,0 +1,20 @@
+<!--pages/mine/systemSettings.wxml-->
+<view class="container">
+  <view class="fun-list">
+    <view>
+      <text mode="widthFix">消息提醒</text>
+      <switch bindchange="switchChange" color="#2F8DFE"></switch>
+    </view>
+    <view bindtap="checkVersion">
+      <text mode="widthFix">版本更新</text>
+      <view class="right-layout" mode="widthFix" >
+        <text >v1.0.0</text>
+        <view class="iconfont icon-right right-icon" style="width: 32rpx;margin-left:10rpx"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="btn" bindtap="signOut" style="margin-top: 50rpx">
+    <text>退出登录</text>
+  </view>
+</view>

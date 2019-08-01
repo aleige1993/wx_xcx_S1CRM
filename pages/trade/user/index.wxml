@@ -1,0 +1,44 @@
+<!--pages/trade/user/index.wxml-->
+<view>
+  <view class='search'>
+    <wux-button block outline size='small' type="stable" bind:click="onSearchFocus"><wux-icon type="ios-search" size="16" /> 按公司名称/联系人/联系电话搜索</wux-button>
+  </view>
+  <view class='user-list'>
+    <view class='list'>
+      <wux-refresher id="wux-refresher" bind:refresh="onRefresh">
+        <scroll-view scroll-y="true" class='list-container' bindscrolltolower="bindscrolltolower">
+          <view class='empty' wx:if="{{userList.length==0}}">
+            <text>暂无数据</text>
+          </view>
+          <!-- TODO 缺真实的数据结构 -->
+          <view class='list-item' wx:for="{{userList}}" wx:key="{{index}}" bindtap='rowTapEvent' data-item='{{item}}'>
+            <view class='lr_flex head'>
+              <text>{{item.company}}</text>
+              <text class='{{item.storeStatus==1?"pass":"unpass"}}'>审</text>
+            </view>
+            <view class='lr_flex'>
+              <view class='info'>
+                <view class='text'>
+                  <view class='iconfont icon-user'></view>
+                  <text>联系人: </text>
+                  <text>{{item.linkName}}</text>
+                </view>
+                <view class='text'>
+                  <zicon type="dianhua" size='16' color='#777' />
+                  <text>电话: </text>
+                  <text>{{item.phone}}</text>
+                </view>
+              </view>
+              <view class='iconfont icon-right'></view>
+            </view>
+            <view class='text'>
+              <view class='iconfont icon-user'></view>
+              <text>业务员: </text>
+              <text>{{item.salesmanName}}</text>
+            </view>
+          </view>
+        </scroll-view>
+      </wux-refresher>
+    </view>
+  </view>
+</view>

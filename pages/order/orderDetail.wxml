@@ -1,0 +1,64 @@
+<!--pages/order/orderDetail.wxml-->
+
+<view class="container gray">
+  <view class="border-bottom order-info padding">
+    <view class="order-title black">{{detail.companyName}}</view>
+    <view class='item'>
+      <text class="colon">订单编号 </text>
+      <text>{{detail.orderNo}}</text>
+    </view>
+    <view class='item'>
+      <text class="colon">订购时间 </text>
+      <text>{{detail.createTime}}</text>
+    </view>
+    <view class='item'>
+      <text class="colon">所在区域 </text>
+      <text>{{detail.areaName}}</text>
+    </view>
+    <view class='item'>
+      <text class="colon">业务员名称 </text>
+      <text>{{detail.salesmanName}}</text>
+    </view>
+  </view>
+  <view class="border-bottom">
+    <view class="goods-info" wx:for="{{good}}" wx:key="{{item.id}}">
+      <image src='{{item.smallPath}}' mode='aspectFit'></image>
+      <view class="goods lr_flex">
+        <view class="row">
+          <view class="title black">{{item.goodsName}}</view>
+          <view>
+            <text>价格: </text>
+            <text>￥ {{item.totalPrice}}</text>
+          </view>
+          <view>
+            <text>单价: </text>
+            <text>￥ {{item.price}}/{{item.unit}}</text>
+          </view>
+        </view>
+        <view class="number black">X{{item.nums}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="padding money">
+    <view class=''>
+      <text class="colon">订单金额</text>
+      <text>￥ {{detail.orderMoney}}</text>
+    </view>
+    <view>
+      <text class="colon">信用支付</text>
+      <text>￥ 0.00</text>
+    </view>
+    <view>
+      <text class="colon">现金支付</text>
+      <text>￥ {{detail.moneyPayed}}</text>
+    </view>
+    <view>
+      <text class="colon">信贷支付</text>
+      <text>￥ {{detail.loansPayed}}</text>
+    </view>
+    <view>
+      <text class="colon">优惠券抵扣</text>
+      <text>￥ 0.00</text>
+    </view>
+  </view>
+</view>

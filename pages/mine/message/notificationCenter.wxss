@@ -1,0 +1,31 @@
+/* pages/mine/message/notificationCenter.wxss */
+.root_layout {
+  background: #fff;
+}
+.msg_item_layout {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  flex: 1;
+  border-bottom: .2rpx solid #ddd;
+  display: flex;
+  align-items: center;
+}
+.msg_info_layout {
+  margin-left: 10rpx;
+  flex: 1;
+  align-items: center;
+  flex-direction: column;
+}
+.msg_info_layout>view {
+  flex: 1;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 8rpx;
+  justify-content: space-between
+}
+.msg_text_view {
+  flex-wrap: wrap;
+  word-break:break-all;
+}

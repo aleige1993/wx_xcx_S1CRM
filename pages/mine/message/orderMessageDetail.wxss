@@ -1,0 +1,20 @@
+/* pages/mine/message/orderMessageDetail.wxss */
+.order-container {
+  padding: 20rpx;
+  background: #fff;
+  height: 100%;
+}
+.user_info{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-content {
+  margin-top: 20rpx;
+}
+.order-content view {
+  margin-bottom: 10rpx;
+}
+.order-content text {
+  color: #FFA725;
+}

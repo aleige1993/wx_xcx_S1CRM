@@ -1,0 +1,26 @@
+
+<view class="container">
+  <view class="bg flex user-info">
+    <view class="flex1">
+      <view>新增注册用户数</view>
+      <view>{{registerUserNewCount}}</view>
+    </view>
+      <view class="flex1 border-left">
+      <view>注册用户总数</view>
+      <view>{{registerUserCount}}</view>
+    </view>
+  </view>
+  <view class="user-info-title row">
+    <view>注册手机</view>
+    <view>注册公司名</view>
+  </view>
+  <view class="scroll-box">
+<refresher class="refresh" bind:refresh="onRefresh" id="refresher" bind:loadMore="loadMore" noData="{{userData.length==0}}">
+  <view class="user-item row"  wx:for="{{userData}}" wx:key="{{index}}">
+    <view>{{item.registerPhone}}</view>
+    <view>{{item.companyName}}</view>
+  </view>
+  <view class="no-more"  wx:if="{{pageData.total>0&&pageIndex == pageData.pageCount}}">没有更多数据</view>
+</refresher>
+</view>
+</view>

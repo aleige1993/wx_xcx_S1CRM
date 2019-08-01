@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wux-icon": "../ui-plugins/wux/icon/index",
+    "wux-badge": "../ui-plugins/wux/badge/index",
+    "wux-tabbar": "../ui-plugins/wux/tabbar/index",
+    "wux-tabbar-item": "../ui-plugins/wux/tabbar-item/index",
+    "wux-button": "../ui-plugins/wux/button/index"
+  }
+}

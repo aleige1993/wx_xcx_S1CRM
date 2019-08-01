@@ -1,0 +1,7 @@
+<!--pages/modifyPrice/priceInfo/index.wxml-->
+<view class='container'>
+<view class='title'>展示价格</view>
+<view class='content'>改价格是用于向客户展示的价格(业务员展示), 以便于价格的洽谈! 该价格可高可低(想比当前价格), 此价格无需审核</view>
+<view class='title'>成交价格</view>
+<view class='content'>改价格是客户成交价格, 此价格修改后需要提交审核, 审核通过后客户可按照此价格进行商品购买</view>
+</view>

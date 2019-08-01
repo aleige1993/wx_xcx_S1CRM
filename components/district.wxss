@@ -1,0 +1,37 @@
+/* components/district.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  background: #fff;
+
+}
+.scroll-box{
+  height: 0;
+  flex: 1;
+  padding-bottom:100rpx;
+}
+.right{
+  float:right;
+}
+.item{
+  line-height: 80rpx;
+  border-bottom:1rpx solid #ddd;
+  padding:0 20rpx;
+}
+.btn{
+  background: #2F8DFE;
+  line-height: 80rpx;
+  color:#fff;
+  border-radius: 10rpx;
+  width:90%;
+  text-align: center;
+  margin-left: 5%;
+  position: absolute;
+  bottom:10rpx;
+
+}

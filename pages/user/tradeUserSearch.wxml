@@ -1,0 +1,51 @@
+
+<view class="container">
+  <view class="page__bd">
+
+
+    <wux-cell hover-class="none">
+      <wux-input label="公司名" placeholder='请输入公司名' clear="true" bind:change="changeName" />
+    </wux-cell>
+    <wux-cell hover-class="none">
+      <wux-input label="联系人" placeholder="请输入联系人" clear="true" bind:change="changeLinkName"/>
+    </wux-cell>
+    <wux-cell hover-class="none">
+      <wux-input label="联系电话" placeholder="请输入联系电话" type="number" clear="true"  bind:change="changePhone"/>
+    </wux-cell>
+    <wux-cell hover-class="none">
+      <wux-input label="业务员名字" placeholder="请输入业务员名字" clear="true" bind:change="changeSalesman"/>
+    </wux-cell>
+    <wux-cell hover-class="none" bindtap="goTag" data-tag="1">
+      <text>系统标签</text>
+      {{systemLabelNames}}
+      <text class="iconfont icon-right"></text>
+    </wux-cell>
+    <wux-cell hover-class="none" bindtap="goTag" data-tag="0">
+      <text>自定义标签</text>
+      {{userLabelNames}}
+      <text class="iconfont icon-right "></text>
+    </wux-cell>
+    <wux-cell hover-class="none">
+    <view class="flex">
+      <picker mode="date" value="{{startDate}}" start="2015-09-01" end="{{end}}" bindchange="bindStartDateChange" class="flex1">
+        <view class="picker" >
+          注册开始时间: {{registerBeginTime}}
+        </view>
+      </picker>
+      <picker mode="date" value="{{endDate}}" start="2015-09-01" end="{{end}}" bindchange="bindEndDateChange" class="flex1">
+        <view class="picker">
+          注册结束时间: {{registerEndTime}}
+        </view>
+      </picker>
+      </view>
+    </wux-cell>
+    <wux-cell hover-class="none">
+    <view class="flex">
+         <wux-input  placeholder="交易次数" clear="true" type="number"  class="flex1" bind:change="changeTradeBeginNum"/>
+         <wux-input  placeholder="交易次数" clear="true"  type="number"  class="flex1" bind:change="changeTradeEndNum"/>
+         </view>
+    </wux-cell>
+
+  </view>
+  <view class="btn" bindtap='search'>筛选</view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "账单记录",
+  "usingComponents": {
+    "user-bar": "../comp_userBar/index"
+  }
+}

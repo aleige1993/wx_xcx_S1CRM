@@ -1,0 +1,51 @@
+/* pages/staffList.wxss */
+.container {
+  /* padding-top: 30rpx; */
+}
+.staff-title {
+  display: flex;
+  align-items: center;
+}
+
+.staff-item .title{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.staff-name{
+  display: inline-block;
+  margin-left:10px;
+  font-size: 28rpx;
+}
+.staff-item{
+  padding:30rpx;
+  color:#333;
+  background: #fff;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.staff-item .text{
+  font-size: 24rpx;
+  color: #aaa;
+  margin-bottom: 30rpx;
+}
+
+.staff-info {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 10rpx 0 10rpx;
+}
+
+.staff-info > view {
+  flex: 1;
+}
+
+.staff-item .image{
+  width: 150rpx;
+  height: 150rpx;
+  box-sizing: border-box;
+  border-radius: 100rpx;
+  flex: 0 0 auto;
+  background-color: #aaa;
+}

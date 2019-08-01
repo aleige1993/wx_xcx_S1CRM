@@ -1,0 +1,71 @@
+<!--pages/mine/index.wxml-->
+<view class="container">
+  <view class="user-info bg lr_flex">
+    <view>
+    <image class="user-photo" src="../../static/images/default_head.png" style="width:42px;vertical-align:middle" mode="widthFix"></image>
+    <view class="user-name">{{username}}</view>
+    </view>
+    <zicon type="bell" size='20' color='#fff' bindtap='goMessagePage' />
+  </view>
+  <!-- <view class="assure-info">
+      <view class="flex text-center " bindtap='goShanfutongPage'>
+        <view class="flex1">
+          <view>已担保</view>
+           <view>23家</view>
+        </view>
+        <view class="flex1">
+          <view>未担保</view>
+           <view>23家</view>
+        </view>
+         <view class="flex1 border-left ">
+          <view>已使用</view>
+           <view>10元</view>
+        </view>
+        <view class="flex1">
+          <view>未使用</view>
+           <view>10元</view>
+        </view>
+      </view>
+  </view>
+  <view class="not-assure-info">未担保</view> -->
+  <view class="func-list">
+    <view wx:if="{{isSaleman}}" bindtap='goPage' data-type='0'>
+      <text class="iconfont icon-ziliao"></text>
+      <text>我的二维码</text>
+      <view class="iconfont icon-right right-icon"></view>
+    </view>
+
+    <view wx:if="{{!isSaleman}}" bindtap='goPage' data-type='1'>
+      <text class="iconfont icon-cc-users"></text>
+      <text>员工管理</text>
+      <view class="iconfont icon-right right-icon"></view>
+    </view>
+    <view wx:if="{{!isSaleman && hasUserManage}}" bindtap='goPage' data-type='2'>
+      <text class="iconfont icon-cc-users"></text>
+      <text>用户管理</text>
+      <view class="iconfont icon-right right-icon"></view>
+    </view>
+    <view wx:if="{{hasOrderManage}}" bindtap='goPage' data-type='5'>
+      <text class="iconfont icon-ziliao"></text>
+      <text>订单结算</text>
+      <view class="iconfont icon-right right-icon"></view>
+    </view>
+    <view wx:if="{{isSaleman && hasUserManage}}" bindtap='goPage' data-type='6'>
+      <text class="iconfont icon-ziliao"></text>
+      <text>用户管理</text>
+      <view class="iconfont icon-right right-icon"></view>
+    </view>
+    <view bindtap='goPage' data-type='3'>
+      <text class="iconfont icon-password"></text>
+      <text>安全管理</text>
+      <view class="iconfont icon-right right-icon"></view>
+    </view>
+    <view bindtap='goPage' data-type='4'>
+      <text class="iconfont icon-shezhi2"></text>
+      <text>系统设置</text>
+      <view class="iconfont icon-right right-icon"></view>
+
+    </view>
+  </view>
+  <common-tabbar activeKey="mine"></common-tabbar>
+</view>

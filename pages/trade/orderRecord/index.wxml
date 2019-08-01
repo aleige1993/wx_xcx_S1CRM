@@ -1,0 +1,4 @@
+<!--pages/trade/orderRecord/index.wxml-->
+<view>
+<user-bar activeKey="order"></user-bar>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/order/areaFilter.wxml-->
+<view class="container">
+  <view class="scroll-box flex1">
+    <scroll-view style="height:100%" scroll-y="true">
+        <view class="provice " wx:for="{{dataArr}}" wx:key="{{item.id}}" wx:for-item="provinceItem">
+          <view class="item" bindtap='clickProvince' data-id="{{provinceItem.id}}" data-provinceName="{{provinceItem.areaName}}">{{provinceItem.areaName}}</view>
+          <!-- <view class="item city" wx:for="{{city}}" wx:if="{{city.length>0}}" wx:for-item="cityItem" data-district="{{cityItem.children}}" bindtap="setDistrictData" data-provinceName="{{provinceItem.name}}" data-cityName="{{cityItem.name}}" wx:key="{{index}}">
+          {{cityItem.name}}
+          </view> -->
+        </view>
+        <city cityData="{{city}}" provinceName="{{provinceName}}" wx:if="{{showCity}}" bind:getChosedDistrict="getChosedDistrict" bind:clickCity="clickCity" ></city>
+        <district districtData="{{district}}" canAll="{{false}}"  provinceName="{{provinceName}}" cityName="{{cityName}}" wx:if="{{showDistrict}}" bind:getChosedDistrict="getChosedDistrict"></district>
+  </scroll-view>
+  </view>
+</view>

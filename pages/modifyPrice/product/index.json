@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "wux-refresher": "../../ui-plugins/wux/refresher/index",
+    "wux-search-bar": "../../ui-plugins/wux/search-bar/index",
+    "wux-white-space": "../../ui-plugins/wux/white-space/index",
+    "z-icon": "../../../components/zicon/index",
+    "wux-button": "../../ui-plugins/wux/button/index",
+    "wux-popup": "../../ui-plugins/wux/popup/index",
+    "wux-cell-group": "../../ui-plugins/wux/cell-group/index",
+    "wux-cell": "../../ui-plugins/wux/cell/index",
+    "wux-input": "../../ui-plugins/wux/input/index"
+  },
+  "navigationBarTitleText": "选择商品"
+}

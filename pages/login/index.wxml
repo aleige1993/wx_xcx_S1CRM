@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="title">
+    <image src="../../static/images/ic_launcher.png" mode="widthFix" style="width:50px; height:50px;margin:0 auto">
+    </image>
+    <view>壹号源CRM管理系统</view>
+  </view>
+  <view class="input-form">
+    <view class="input-box flex margin-bttom-10">
+      <text class="iconfont icon-user icon"></text>
+      <input class="flex1" placeholder='请输入用户名' name="username" bindinput='setUsernameValue' value="{{username}}"></input>
+    </view>
+    <view class="input-box flex">
+   <view class="iconfont icon-password1 icon"></view>
+    <input class="flex1" placeholder='请输入密码' name="password" password="true" bindinput='setPasswordValue' value="{{password}}"></input>
+    </view>
+  </view> 
+  <view >
+    <view class="btn" bindtap="login">登录</view>
+  </view>
+</view>

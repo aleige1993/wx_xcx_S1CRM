@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "wux-cell-group": "../../../ui-plugins/wux/cell-group/index",
+    "wux-cell": "../../../ui-plugins/wux/cell/index",
+    "wux-input": "../../../ui-plugins/wux/input/index",
+    "wux-select": "../../../ui-plugins/wux/select/index",
+    "wux-calendar": "../../../ui-plugins/wux/calendar/index",
+    "wux-input-number": "../../../ui-plugins/wux/input-number/index",
+    "wux-button": "../../../ui-plugins/wux/button/index",
+    "wux-checkbox-group": "../../../ui-plugins/wux/checkbox-group/index",
+    "wux-icon": "../../../ui-plugins/wux/icon/index",
+    "wux-checkbox": "../../../ui-plugins/wux/checkbox/index"
+  },
+  "navigationBarTitleText": "交易客户信息"
+}

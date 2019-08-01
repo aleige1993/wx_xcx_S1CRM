@@ -1,0 +1,32 @@
+/* pages/trade/billRecord/index.wxss */
+.trade-info {
+  color: #fff;
+  text-align: center;
+  line-height: 30rpx;
+  border: 2rpx solid rgba(255, 255, 255, 0.2);
+}
+
+.info-cell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid rgba(255, 255, 255, 0.2);
+}
+
+.trade-info .info-cell {
+  border-right: 2rpx solid rgba(255, 255, 255, 0.2);
+}
+
+.trade-info .info-cell:last-child {
+  border-right: none;
+}
+
+.info-cell>view:first-child {
+  font-size: 24rpx;
+}
+
+.info-cell>view:last-child {
+  font-size: 32rpx;
+}

@@ -1,0 +1,57 @@
+/* pages/shanfutong.wxss */
+.tab{
+  padding:20px;
+  color:#fff;
+ 
+  text-align: center;
+}
+.tab-box{
+  line-height: 32px;
+ 
+
+}
+.tab-box>view{
+  
+   border:1px solid #fff;
+}
+
+.tab-box>view:first-child{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.tab-box>view:last-child{
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.choose{
+  background: #fff;
+  color: #2F8DFE;
+}
+.num-box{
+  padding:20px;
+    text-align: center;
+    color:#fff;
+}
+.num{
+  font-size:18px;
+}
+.item{
+  margin-bottom:10px;
+  background: #fff;
+}
+.user-title{
+  padding:10px;
+   border-bottom:1px solid #ddd;
+}
+.user-info{
+  margin-left:10px;
+ 
+}
+.btn{
+  padding:10px;
+  width:auto;
+  line-height: 40rpx;
+  float:right;
+margin:10rpx;
+}
+

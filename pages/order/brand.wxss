@@ -1,0 +1,16 @@
+/* pages/order/brand.wxss */
+.container{
+  background:#fff;
+  padding:20rpx 10rpx;
+
+}
+.brand-item{
+  border:1rpx solid #ddd;
+  margin:0rpx 10rpx 20rpx 10rpx;
+  padding:20rpx 40rpx;
+  display: inline-block;
+  text-align: center;
+}
+.brand-item.choose{
+  border:1rpx solid #2F8DFE;
+}

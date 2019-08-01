@@ -1,0 +1,29 @@
+/* pages/user/tradeUserSearch.wxss */
+.container{
+  background: #fff;
+}
+.btn{
+  margin-top:20rpx;
+  margin-bottom:20rpx;
+  margin-left:2%;
+  margin-right:2%;
+  flex:1;
+}
+.btn.clear{
+  background:#fff;
+  border:1rpx solid #2F8DFE;
+
+  color:#2F8DFE;
+}
+.icon-right{
+  color:#aeaeae;
+  float:right;
+}
+.text-right{
+  text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100rpx;
+}
+

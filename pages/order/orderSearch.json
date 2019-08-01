@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "订单数据",
+  "usingComponents": {
+    "order-status-search": "../../components/orderStatusSearch",
+      "refresher": "../../../components/refresh-scroll-view/index"
+  }
+}

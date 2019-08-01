@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "refresher": "../../../components/refresh-scroll-view/index"
+  },
+  "navigationBarTitleText": "订单消息"
+}

@@ -1,0 +1,21 @@
+/* pages/mine/systemSettings.wxss */
+.fun-list{
+  margin-top: 20rpx;
+  background: #fff;
+}
+.fun-list>view{
+  line-height: 100rpx;
+  border-bottom: .5rpx solid #ddd;
+  padding-left: 30rpx;
+  padding-right: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.right-layout{
+  display: flex;
+  align-items: center;
+}
+.left-icon{
+  margin-right: 10rpx;
+}

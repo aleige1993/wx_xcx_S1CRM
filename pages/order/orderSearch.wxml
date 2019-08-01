@@ -1,0 +1,31 @@
+<!--pages/order/orderSearch.wxml-->
+<view class="container ">
+  <search id="search" bindtap="showSearch" searchText="订单状态"></search>
+  <order-status-search showSearchBool="{{showSearchBool}}" bind:changeStatus="changeStatus" statusStr="{{searchParams.status}}"></order-status-search>
+  <refresher class="refresh" scrollViewOffset="{{offset}}" bind:refresh="onRefresh" id="refresher" bind:loadMore="loadMore" noData="{{orderData.length==0}}">
+    <view class="order-item flex" catchtap='orderDetail' wx:for="{{orderData}}" wx:key="{{index}}" data-item='{{item}}'>
+      <view class="flex1">
+        <view class="order-title">{{item.companyName}}</view>
+        <view class="gray">
+          <text class="colon">订单编号: </text>
+          <text>{{item.orderNo}}</text>
+        </view>
+        <view class="gray">
+          <text class="colon">订购时间: </text>
+          <text>{{item.createTime}}</text>
+        </view>
+        <view class="gray">
+          <text class="colon">订单金额: </text>
+          <text>{{item.orderMoney}}</text>
+        </view>
+      </view>
+      <view>
+        <view wx:if="{{item.orderStatus==3}}" class="status-btn orange">已完成</view>
+        <view wx:if="{{item.orderStatus==1}}" class="status-btn blue">已支付</view>
+        <view wx:if="{{item.orderStatus==2}}" class="status-btn green">已发货</view>
+        <view wx:if="{{item.orderStatus==6}}" class="status-btn gray">已退款</view>
+      </view>
+    </view>
+  </refresher>
+  
+</view>

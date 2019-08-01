@@ -1,0 +1,129 @@
+/* pages/modifyPrice/index.wxss */
+.search {
+  display: flex;
+  align-items: center;
+  border-bottom: #e4e4e4 1rpx solid;
+}
+
+.search .word {
+  width: 75%;
+}
+.search .search-bar::after {
+  border: none;
+}
+
+.history {
+  width: 25%;
+  height: 100%;
+  line-height: 100%;
+  color: blue;
+  text-align: center;
+}
+
+.list-container {
+  background: #eee;
+  height: 910rpx;
+  overflow: hidden;
+}
+
+.list {
+  background: #fff;
+  padding: 30rpx 0;
+  width: 100%;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.list .badge {
+  position: relative;
+  margin: 0 30rpx;
+}
+
+.list .badge .new{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #52c41a;
+  font-size: 24rpx;
+}
+
+.list .image{
+  width: 150rpx;
+  height: 150rpx;
+  box-sizing: border-box;
+  border-radius: 100rpx;
+  flex: 0 0 auto;
+}
+
+.list .info{
+  flex: 1;
+  width: 0;
+}
+.list .list-checkbox{
+  margin-left: 20rpx;
+}
+
+.list-checkbox.unchecked{
+  display: none;
+}
+.list-checkbox.checked{
+  display: inline-block;
+}
+
+.list .info> view {
+  padding: 4rpx;
+}
+
+.list .text{
+  display: inline-block;
+  /* max-width: 300rpx; */
+  font-size: 24rpx;
+}
+
+.list .text.phone {
+  margin: 0 20rpx;
+}
+
+.list .address {
+  display: flex;
+}
+.list .address .text
+,.info .time{
+  color: #aaa;
+  padding: 0 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;  
+}
+.list-container .order {
+  background: #fff;
+  color: #707070;
+}
+.list-container .order>view {
+  width: 50%;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 10rpx 30rpx;
+}
+
+.list-container .order>view:first-child{
+  border-right: 2rpx solid #ddd;
+}
+
+.start_flex {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.fix-bottom {
+  bottom: 76rpx;
+}
+.fix-bottom.wux-button--disabled{
+  opacity: 1!important;
+  color: #ddd!important;
+}
+
+.order .money{
+  font-size: 24rpx;
+}

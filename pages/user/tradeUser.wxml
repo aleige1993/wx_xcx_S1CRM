@@ -1,0 +1,19 @@
+<view class="container">
+  <search bindtap="showSearch" searchText="请选择筛选条件"></search>
+  <view class="row flex list-title">
+    <view class="name flex1">公司名</view>
+    <view class="money flex1">交易金额</view>
+  </view>
+  <view class="scroll-box">
+    <scroll-view style="height:100%" scroll-y="true"  bindscrolltolower="bindscrolltolower">
+    <wux-refresher bind:refresh="onRefresh" id="wux-refresher" >
+     <view class="no-data" wx:if="{{!userData.length || pageData.total==0}}">暂无用户数据</view>
+      <view class="row flex "  wx:for="{{userData}}" wx:key="{{index}}">
+        <view class="name flex1">{{item.company}}</view>
+        <view class="money flex1">{{item.amount}}</view>
+      </view>
+      <view class="no-more"  wx:if="{{pageData.total>0&&pageIndex == pageData.pageCount}}">没有更多数据</view>
+        </wux-refresher>
+    </scroll-view>
+  </view>
+</view>

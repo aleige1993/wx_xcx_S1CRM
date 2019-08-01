@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "今日",
+  "backgroundColor": "#eeeeee",
+  "enablePullDownRefresh": true,
+  "usingComponents": {}
+}

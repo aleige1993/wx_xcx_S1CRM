@@ -1,0 +1,37 @@
+/* pages/login/index.wxss */
+.container{
+  background: #fff;
+}
+.title{
+  text-align:center;
+  padding-top:60rpx;
+  font-size:44rpx;
+  color:#2F8DFE;
+}
+.input-form{
+  margin:20px 0;
+
+}
+.input-form image{
+  margin-top:24rpx;
+  margin-left:20rpx;
+}
+.input-box{
+
+  width:90%;
+  margin-left:5%;
+  border:1px solid #ddd;
+  height: 80rpx;
+  border-radius: 10rpx;
+}
+input{
+padding-left: 20rpx;
+  line-height: 80rpx;
+  height: 100%;
+  
+}
+.icon{
+  margin-left: 20rpx;
+  color:#aeaeae;
+  line-height: 80rpx;
+}

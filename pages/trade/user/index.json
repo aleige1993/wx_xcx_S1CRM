@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "wux-refresher": "../../ui-plugins/wux/refresher/index",
+    "zicon": "../../components/zicon/index",
+    "wux-button": "../../ui-plugins/wux/button/index"
+  },
+  "navigationBarTitleText": "用户数据"
+}
